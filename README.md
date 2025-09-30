@@ -1,5 +1,5 @@
-># Persona 5 Phantom x Mods Thai sever TW
-คือมันเป็นแปล translate auto google ต้องโหลด mods แปลอังกฤษมาลงก่อน แล้วถึงเอาอันนี้ไปก๊อปลงตาม folders เพราะ mods นี้ผมทำแค่แก้ config ให้เป็นแปล auto ไทย กับเอา text ภาษาไทย google มาใส่ มันจะแปลแค่ที่ต้องเจนบางอัน mods eng แปลมาแล้วผมจะไม่ยุ่ง  
+# Persona 5 Phantom x Mods Thai sever TW
+&nbsp;&nbsp;คือมันเป็นแปล translate auto google ต้องโหลด mods แปลอังกฤษมาลงก่อน แล้วถึงเอาอันนี้ไปก๊อปลงตาม folders เพราะ mods นี้ผมทำแค่แก้ config ให้เป็นแปล auto ไทย กับเอา text ภาษาไทย google มาใส่ มันจะแปลแค่ที่ต้องเจนบางอัน mods eng แปลมาแล้วผมจะไม่ยุ่ง  
 ---วิธีลง---  
 1.)ก่อนอื่นลง mods english ของ sever Taiwan ก่อน  
 2.)เข้าไปที่เกมลง mods eng ไว้ในไฟล์ตัวเกม ตัวอย่าง ผมลงไว้ใน C:\P5X\client\pc ประมาณนี้ครับ  
@@ -12,7 +12,7 @@
   
 >ขอบคุณ orginal mods ที่ผมเอามาทำสาสารถโหลด mod eng ได้ที่ discord : https://discord.gg/aNwYfuby  
 กับ github ที่แปลภาษาอังกฤษของคุณ https://github.com/JayJay34  
-และอีกหลายๆคนที่ช่วยกันทำ  
+&nbsp;&nbsp;และอีกหลายๆคนที่ช่วยกันทำ  
    
 >แนะนำรอ global เพราะใกล้เปิดแล้วครับ mods นี้คงไม่ได้อัพเดตต่อทำมาแค่เอาสนุกเท่านั้นครับ  เอาไปทำอะไรต่อก็ได้แต่ ตัวไฟล์ front thai p5x  และเอาไปใช้ในเกมอื่นที่เป็นใช้ unity โดยการใช้ XunityAutoTranslate ได้ครับ  ลองไปศึกษาดูครับ https://github.com/bbepis/XUnity.AutoTranslator  
-ผมทำไว้ใช้ในเกม xunity translate แก้ไขไฟล์จมมาแล้วครับ
+&nbsp;&nbsp;ผมทำไว้ใช้ในเกม xunity translate แก้ไขไฟล์จมมาแล้วครับ
