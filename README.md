@@ -20,11 +20,14 @@
 &nbsp;&nbsp;ผมทำไว้ใช้ในเกม xunity translate แก้ไขไฟล์จมมาแล้วครับ
 <br>
 <br>
+  
   # ตย. เนื้อเรื่องหลักที่แปล  
   <img width="1915" height="965" alt="persona text pre1" src="https://github.com/user-attachments/assets/9960602c-9af7-4b60-81f4-dbe0a67699b1" />  
   <br>
+    
   # ตย. สกิลที่แปล  
   <img width="1920" height="1048" alt="persona skill pre" src="https://github.com/user-attachments/assets/444d49e2-8fda-4565-97cb-fe027ace080b" />  
   <br>
+    
   # ตย. ตอนต่อสู้  
   <img width="1920" height="1051" alt="persona battle pre" src="https://github.com/user-attachments/assets/00e9b1cf-3889-45eb-b5e9-00529ae84262" />  
