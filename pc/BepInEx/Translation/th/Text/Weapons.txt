@@ -2,7 +2,6 @@
 改造等級：=<size\=26>Reform Rank:</size>
 改造等級=<size\=26>Reform Rank</size>
 突破等級=<size\=26>Enhance Rank</size>
-突破=<size\=19>Enhance</size>
 當前效果=Effects
 改造詳情=Details
 改造介紹=Reform Details
@@ -13,9 +12,14 @@
 該武器已提升到滿級！=Weapon Lv. maxed!
 該武器已改造到滿級！=<size\=18>Weapon Reform maxed!</size>
 暫無可提供強化的材料=No materials
-僅可消耗同名武器=Only use weapon wtih the same name
-可消耗同星級武器或永恆的銘記之證=Only use weapon with the same rarity
-可消耗同星級武器或特別的存在之證=Only use weapon with the same rarity
+永恆的銘記之證=Eternal Proof
+僅可消耗同名武器=Spend same name weapon
+可消耗「同名武器」=Spend [Same Name Weapon]
+可消耗「同星級武器」=Spend [Same Rarity Weapon]
+可消耗「同名武器」或「永恆的銘記之證」=<size\=25>Spend [Same Name Weapon] or [Eternal Proof]</size>
+可消耗同星級武器或永恆的銘記之證=<size\=25>Spend same rarity weapon or Eternal Proof</size>
+可消耗同星級武器或特別的存在之證=<size\=25>Spend same rarity weapon or Eternal Proof</size>
+可消耗「同星級武器」或「永恆的銘記之證」=<size\=25>Spend [Same Rarity Weapon] or [Eternal Proof]</size>
 替換成功，已自動繼承強化等級及突破等級。=Changed weapon, automatically inherited Weapon Lv. and Reform Rank.
 尚未獲取=Not obtained
 已將武器鎖定。=Locked this weapon.
@@ -23,7 +27,7 @@
 該裝備正在穿戴中，無法作為材料。=Cannot use equipped equipment as material.
 鎖定中的武器無法分解，請先將武器解鎖。=Cannot dismantle locked weapon, please unlock the weapon first.
 穿戴中的武器無法分解，請先將武器卸下。=Cannot dismantle equipped weapon, please unequiped the weapon first.
-r:"^是否消耗(.*)進行改造？$"="Consume this to reform?"
+r:"^是否消耗(.*)進行改造？$"="Spend this to reform?"
 
 武器分解=Dismantle Weapon
 只有橙色品質武器可以分解哦。=Can only dismantle orange quality weapons.
@@ -31,471 +35,957 @@ r:"^是否消耗(.*)進行改造？$"="Consume this to reform?"
 分解後武器本體將直接轉化成道具=Convert the weapon into items
 獲得道具=Get
 
+sr:"^(.*)專屬近戰武器。(.*)。$"="Exclusive melee weapon for $1. $2"
+sr:"^(.*)專屬武器。(.*)。$"="Exclusive weapon for $1. $2"
+
 ----------
 WONDER WEAPONS
 ----------
 WONDER使用=Used by Wonder
 WONDER 使用=Used by Wonder
-七日之焰=<size\=25>Flame of Seven Suns</size>
-【熔岩腐蝕】=<size\=24>[Lava Erosion]</size>
+sr:"^用於改造(.*)的特殊晶石。$"="<size\=28>Used to reform $1.</size>"
+七日之焰=<size\=26>Sennight Inferno</size>
+【熔岩腐蝕】=[Lava Erosion]
 熔岩腐蝕=Lava Erosion
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每裝配1種不同屬性的{{A}}，對敵人造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，最多疊加3層。擊倒敵人時，有100%基礎機率使敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，效果持續1回合。$"="Increase ATK by <color\=#2899FF>$1</color>. For each equiped Persona with a different element, increase DMG Dealt by <color\=#2899FF>$2</color>. When downing an enemy, there is a 100% base chance to decrease that enemy's DEF by <color\=#2899FF>$3</color> for 1 turn."
-七日之焰晶石=<size\=14>Flame of Seven Suns Crystal</size>
-僅可消耗七日之焰晶石=Only use Flame of Seven Suns Crystal
+r:"^攻擊力提升(.*)。每裝配1種不同屬性的{{A}}，對敵人造成的傷害提升(.*)，最多疊加(.*)層。擊倒敵人時，有100%固定機率使敵人防禦力降低(.*)，效果持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. For each Persona of a different attribute equipped, increase DMG by <color\=#2899FF>$2</color>. Stacks up to $3 times. After knocking down a foe, decrease the target's DEF by <color\=#2899FF>$4</color> for $5 turn."
+七日之焰晶石=<size\=17>Sennight Inferno Crystal</size>
+僅可消耗七日之焰晶石=Only use Sennight Inferno Crystal
 
-湧動迴響=Surge Echoes
-【腎上腺素】=<size\=24>[Adrenaline]</size>
+湧動迴響=All In
+【腎上腺素】=[Adrenaline]
 腎上腺素=Adrenaline
-r:"^治療加成、護盾加成提升<color\=#2899FF>(\d+\.\d+%)</color>。光環：主角在場時使所有怪盜獲得防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。當為隊友使用技能時，使主要技能目標獲得基於自身生命值上限<color\=#2899FF>(\d+\.\d+%)</color>的回復效果。$"="Increase Healing Bonus, Shield Effect by <color\=#2899FF>$1</color>. \nAura: Increase all allies' DEF by <color\=#2899FF>$2</color> when Wonder is present. When using a skill on allies, the main target restore <color\=#2899FF>$3</color> Max HP."
-湧動迴響晶石=<size\=20>Surge Echoes Crystal</size>
-僅可消耗湧動迴響晶石=Only use Surge Echoes Crystal
+r:"^治療加成、護盾加成提升<color\=#2899FF>(.*)</color>。光環：主角在場時使所有怪盜獲得防禦力提升<color\=#2899FF>(.*)</color>。當為隊友使用技能時，使主要技能目標獲得基於自身生命值上限<color\=#2899FF>(.*)</color>的回復效果。$"="Increase healing and shield by <color\=#2899FF>$1</color>. \nAura: When user is on the field, increase party's DEF by <color\=#2899FF>$2</color>. After using a skill on an ally, restore <color\=#2899FF>$3</color> of the main target's Max HP."
+湧動迴響晶石=All In Crystal
+僅可消耗湧動迴響晶石=Only use All In Crystal
 
-機械處刑者=<size\=21>Mechanical Executioner</size>
-【超頻爆發】=<size\=24>[Overclock Burst]</size>
+機械處刑者=Ex Machina
+【超頻爆發】=[Overclock Burst]
 超頻爆發=Overclock Burst
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，\n光環：WONDER在場時使所有怪盜提升<color\=#2899FF>(\d+)</color>點攻擊力。\n根據進入戰鬥時的{{A}}獲得相應屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，其他怪盜獲得相當於前者(\d+%)的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAura: Increase all allies' ATK by <color\=#2899FF>$2</color> when Wonder is present. \nIncrease Elemental DMG by <color\=#2899FF>$3</color> based on your starting Persona, other allies gain $4 of this effect."
-機械處刑者晶石=<size\=13>Mechanical Executioner Crystal</size>
-僅可消耗機械處刑者晶石=Only use Mechanical Executioner Crystal
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>，\n光環：WONDER在場時使所有怪盜提升<color\=#2899FF>(.*)</color>點攻擊力。\n根據進入戰鬥時的{{A}}獲得相應屬性傷害提升<color\=#2899FF>(.*)</color>，其他怪盜獲得相當於前者(.*)的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAura: When user is on the field, increase party's ATK by <color\=#2899FF>$2</color>. \nBased on the attribute of the {{A}} equipped at the start of battle, increase DMG of that attribute by <color\=#2899FF>$3</color>, and $4 for other allies."
+機械處刑者晶石=Ex Machina Crystal
+僅可消耗機械處刑者晶石=Only use Ex Machina Crystal
 
-遠古力場=<size\=21>Ancient Force Field</size>
-【自然之力】=<size\=24>[Force of Nature]</size>
+遠古力場=Arc Knife
+【自然之力】=[Force of Nature]
 自然之力=Force of Nature
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使敵人附著元素異常時使自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，2回合。造成元素異常時，效果命中提高<color\=#2899FF>(\d+\.\d+%)</color>。\n攻擊敵人時，使敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，2回合。敵人每有一種元素異常狀態，額外觸發1次該效果，最多疊加4層。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> for 2 turns after inflicting Elemental Ailments. Increase EHR by <color\=#2899FF>$3</color> when inflicting Elemental Ailments. When attacking an enemy, decrease their DEF by <color\=#2899FF>$4</color> for 2 turns. For each Elemental Ailments that enemy has, trigger this effect again, up to 4 times."
-遠古力場晶石=<size\=15>Ancient Force Field Crystal</size>
-僅可消耗遠古力場晶石=Only use Ancient Force Field Crystal
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。使敵人附著元素異常時使自身攻擊力提升<color\=#2899FF>(.*)</color>，(.*)回合。造成元素異常時，效果命中提高<color\=#2899FF>(.*)</color>。\n攻擊敵人時，使敵人防禦力降低<color\=#2899FF>(.*)</color>，(.*)回合。敵人每有一種元素異常狀態，額外觸發1次該效果，最多疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. After inflicting an Elemental Ailment, increase ATK by <color\=#2899FF>$2</color> for $3 turns. Increase Elemental Ailment Accuracy by <color\=#2899FF>$4</color>. When attacking a foe, decrease the target's DEF by <color\=#2899FF>$5</color> for $6 turns. Increase this effect for each of target's Elemental Ailments, up to $7."
+遠古力場晶石=Arc Knife Crystal
+僅可消耗遠古力場晶石=Only use Arc Knife Crystal
 
-結晶遺藏=<size\=25>Crystalline Relic</size>
-【聖眷餘音】=<size\=24>[Holy Aftersound]</size>
+結晶遺藏=Glimmer
+【聖眷餘音】=[Holy Aftersound]
 聖眷餘音=Holy Aftersound
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，\n祝福屬性傷害提升、治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>。\n回合開始時，為1名怪盜提供祝福效果並為其提供傷害加成<color\=#2899FF>(\d+\.\d+%)</color>；如果這名怪盜是祝福屬性怪盜，則額外獲得祝福傷害加成<color\=#2899FF>(\d+\.\d+%)</color>。\n此後每2回合觸發一次相同效果。$"="Increase ATK by <color\=#2899FF>$1</color> and increase Bless DMG, Healing Effect by <color\=#2899FF>$2</color>. \nAt the start of your turn, give 1 ally Bless and increase their DMG Bonus by <color\=#2899FF>$3</color>; If that ally is a Bless thief, increase their Bless DMG Bonus by <color\=#2899FF>$4</color>. \nThis effect will trigger every 2 turns."
-結晶遺藏晶石=<size\=17>Crystalline Relic Crystal</size>
-僅可消耗結晶遺藏晶石=Only use Crystalline Relic Crystal
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>，\n祝福屬性傷害提升、治療效果提升<color\=#2899FF>(.*)</color>。\n回合開始時，為1名怪盜提供祝福效果並為其提供傷害加成<color\=#2899FF>(.*)</color>；如果這名怪盜是祝福屬性怪盜，則額外獲得祝福傷害加成<color\=#2899FF>(.*)</color>。\n此後每(.*)回合觸發一次相同效果。$"="Increase ATK by <color\=#2899FF>$1</color>. \nIncrease Bless DMG and healing by <color\=#2899FF>$2</color>. \nAt the start of the turn, grant Blessing to 1 ally and increase their DMG by <color\=#2899FF>$3</color>. If the target's attribute is Bless, increase Bless DMG by <color\=#2899FF>$4</color>. \nEffect reactivates every $5 turns."
+結晶遺藏晶石=Glimmer Crystal
+僅可消耗結晶遺藏晶石=Only use Glimmer Crystal
 
-葬送之眼=<size\=30>Eye of Burial</size>
-【深淵凝視】=<size\=24>【Abyssal Gaze]</size>
+葬送之眼=<size\=22>Eye of Obsequies</size>
+【深淵凝視】=【Abyssal Gaze]
 深淵凝視=Abyssal Gaze
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>,\n為敵人添加異常狀態時，使目標效果抵抗降低<color\=#2899FF>(\d+\.\d+%)</color>並且自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續3回合，最多可疊加2層，每層獨立計算。層數到達2時，使敵人受物理傷害加深<color\=#2899FF>(\d+\.\d+%)</color>，持續3回合。$"="Increase ATK by <color\=#2899FF>$1</color>, \nWhen inflicting a debuff to enemies, decrease the target's Effect RES by <color\=#2899FF>$2</color> and increase own ATK by <color\=#2899FF>$3</color> for 3 turns, up to 2 stacks, each stacks count down independently. When there are 2 stacks, increase that enemy's Phys DMG Taken by <color\=#2899FF>$4</color> for 3 turns."
-葬送之眼晶石=<size\=18>Eye of Burial Crystal</size>
-僅可消耗葬送之眼晶石=Only use Eye of Burial Crystal
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>,\n為敵人添加異常狀態時，使目標效果抵抗降低<color\=#2899FF>(.*)</color>、防禦力降低<color\=#2899FF>(.*)</color>並且自身攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合，最多可疊加(.*)層，每層獨立計算。層數到達(.*)時，使敵人受物理傷害加深<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAfter inflicting a status ailment, increase user's ATK by <color\=#2899FF>$4</color>, then decrease foe's Ailment RES by <color\=#2899FF>$2</color> and DEF by <color\=#2899FF>$3</color> for $5 turns. This effect stacks up to $6 times, and stacks are spent separately. With $7 stacks, increase target's Physical DMG taken by <color\=#2899FF>$8</color> for $9 turns."
+葬送之眼晶石=<size\=16>Eye of Obsequies Crystal</size>
+僅可消耗葬送之眼晶石=Only use Eye of Obsequies Crystal
 
-天象星儀=Astro Orb
-【占星術數】=<size\=24>[Astrology Divination]</size>
+天象星儀=<size\=26>Starry Compass</size>
+【占星術數】=[Astrology Divination]
 占星術數=Astrology Divination
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>,\n光環『星盤萬象』：根據WONDER的『推衍』層數啟動以下效果：\n(\d+)層：全體敵人防禦降低<color\=#2899FF>(\d+\.\d+%)</color>\n(\d+)層：所有怪盜效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>\n(\d+)層：所有怪盜念動傷害提升<color\=#2899FF>(\d+\.\d+%)</color>\n戰鬥開始獲得(\d+)層『推衍』，對每個敵人造成每次傷害，WONDER獲得(\d+)層『推衍』。WONDER回合結束消耗(\d+)層『推衍』。$"="Increase ATK by <color\=#2899FF>$1</color>, \nHalo [Universal Astrolabe]: Gain the following effects based on how many stacks of [Derivation] Wonder has: \n$2 stacks: Decrease all enemies' DEF by <color\=#2899FF>$3</color>\n$4 stacks: Increase all allies' EHR by <color\=#2899FF>$5</color>\n$6 stacks: Increase all allies' Psy DMG by <color\=#2899FF>$7</color>\nGain $8 stacks of [Derivation] at the start of battle, each time an enemy took a hit of damage, Wonder gains $9 stack of [Derivation]. Consume $10 stacks of [Derivation] at the end of Wonder's turn."
-r:"^星盤萬象$"="Universal Astrolabe"
-r:"^推衍$"="Derivation"
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>,\n光環『星盤萬象』：根據WONDER的『推衍』層數啟動以下效果：\n(.*)層：全體敵人防禦降低<color\=#2899FF>(.*)</color>\n(.*)層：所有怪盜效果命中提升<color\=#2899FF>(.*)</color>\n(.*)層：所有怪盜念動傷害提升<color\=#2899FF>(.*)</color>\n戰鬥開始獲得(.*)層『推衍』，對每個敵人造成每次傷害，WONDER獲得(.*)層『推衍』。WONDER回合結束消耗(.*)層『推衍』。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAura [Universal Astrolabe]: Gain the following effects based on number of stacks of Guidance. \n$2 stacks: Decrease all foes' DEF by <color\=#2899FF>$3</color>.\n$4 stacks: Increase party's Ailment ACC by <color\=#2899FF>$5</color>.\n$6 stacks: Increase party's Psy DMG by <color\=#2899FF>$7</color>.\nAt the start of battle, gain $8 [Guidance] stacks, and each time damage is dealt to a foe, gain $9 stack. At the end of user's turn, lose $10 [Guidance] stacks."
+星盤萬象=Universal Astrolabe
+推衍=Guidance
 sr:"^根據層數激發『(.*)』的效果$"="Activate the effects of [$1] based on the stack amount"
-天象星儀晶石=Astro Orb Crystal
-僅可消耗天象星儀晶石=Only use Astro Orb Crystal
+天象星儀晶石=<size\=17>Starry Compass Crystal</size>
+僅可消耗天象星儀晶石=Only use Starry Compass Crystal
 
-凶獸之牙=Beast's Fang
-【狩獵律動】=<size\=24>[Hunting Trance]</size>
-狩獵律動=Hunting Trance
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>,\n使用{{A}}技能造成傷害時獲得(\d+)層『狩獵律動』，每造成(\d+)次傷害額外獲得(\d+)層『狩獵律動』。『狩獵律動』：提升自身<color\=#2899FF>(\d+\.\d+%)</color>的傷害，持續(\d+)回合，最多疊加(\d+)層。『狩獵律動』達到(\d+)/(\d+)層時，額外獲得<color\=#2899FF>(\d+\.\d+%)</color>/<color\=#2899FF>(\d+\.\d+%)</color>的暴擊率提升及<color\=#2899FF>(\d+\.\d+%)</color>/<color\=#2899FF>(\d+\.\d+%)</color>的暴擊效果提升。$"="Increase ATK by <color\=#2899FF>$1</color>. \nGain $2 stack of [Hunting Trance] when dealing damage with a Persona skill, additionally gain $4 stack of [Hunting Trance] after dealing damage $3 times. \n[Hunting Trance]: Increase own damage by <color\=#2899FF>$5</color> for $6 turn, up to $7 stacks. When you have $8/$9 stacks of [Hunting Trance], additionally gain <color\=#2899FF>$10</color>/<color\=#2899FF>$11</color> CRIT Rate and <color\=#2899FF>$12</color>/<color\=#2899FF>$13</color> CRIT DMG."
-凶獸之牙晶石=Beast's Fang Crystal
-僅可消耗凶獸之牙晶石=Only use Beast's Fang Crystal
+凶獸之牙=Abyss Fang
+【狩獵律動】=[Hunter's Instinct]
+狩獵律動=Hunter's Instinct
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>,\n使用{{A}}技能造成傷害時獲得(.*)層『狩獵律動』，每造成(.*)次傷害額外獲得(.*)層『狩獵律動』。『狩獵律動』：提升自身<color\=#2899FF>(.*)</color>的傷害，持續(.*)回合，最多疊加(.*)層。『狩獵律動』達到(.*)/(.*)層時，額外獲得<color\=#2899FF>(.*)</color>/<color\=#2899FF>(.*)</color>的暴擊率提升及<color\=#2899FF>(.*)</color>/<color\=#2899FF>(.*)</color>的暴擊效果提升。$"="Increase ATK by <color\=#2899FF>$1</color>.\nWhen dealing damage with a {{A}} skill, gain $2 [Hunter's Instinct] stacks. Every $3 times damage is dealt, gain $4 more stack. \n[Hunter's Instinct]: Increase DMG Bonus by <color\=#2899FF>$5</color> for $6 turn. Stacks up to $7 times. When [Hunter's Instinct] is at $8/$9 stacks, also increase Crit Rate by <color\=#2899FF>$10</color>/<color\=#2899FF>$11</color>, and increase Crit DMG by <color\=#2899FF>$12</color>/<color\=#2899FF>$13</color>."
+凶獸之牙晶石=Abyss Fang Crystal
+僅可消耗凶獸之牙晶石=Only use Abyss Fang Crystal
 
 灼熱煉獄=Fiery Inferno
-【煉獄洗禮】=<size\=24>[Inferno Baptism]</size>
+【煉獄洗禮】=[Inferno Baptism]
 煉獄洗禮=Inferno Baptism
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n光環『煉獄洗禮』：根據WONDER的『淨化之焰』層數啟動以下效果：\n(\d+)層：自身攻擊力提升<color\=#2899FF>(\d+)</color>點，其他怪盜攻擊力提升<color\=#2899FF>(\d+)</color>點。\n(\d+)層：自身造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，其他怪盜造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。\n(\d+)層：所有怪盜火焰傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。\n戰鬥開始獲得(\d+)層『淨化之焰』，所有怪盜使用{{A}}技能造成火焰傷害時獲得(\d+)層『淨化之焰』。WONDER回合開始時消耗(\d+)層『淨化之焰』。$"="Increase ATK by <color\=#2899FF>$1</color>.\nHalo [Inferno Baptism]: Gain the following effects based on how many stacks of [Purifying Flame] Wonder has:\n$2 stack: Increase own ATK by <color\=#2899FF>$3</color> and all other allies' ATK by <color\=#2899FF>$4</color>.\n$5 stacks: Increase own DMG Dealt by <color\=#2899FF>$6</color> and all other allies' DMG Dealt by <color\=#2899FF>$7</color>.\n$8 stacks: Increas all allies' Fire DMG by <color\=#2899FF>$9</color>.\nGain $10 stacks of [Purifying Flame] at the start of battle, gain $11 stack of [Purifying Flame] when any ally deal Fire damage with a Persona skill. Consume $12 stack of [Purifying Flame] at the start of Wonder's turn."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n光環『煉獄洗禮』：根據WONDER的『淨化之焰』層數啟動以下效果：\n(.*)層：自身攻擊力提升<color\=#2899FF>(.*)</color>點，其他怪盜攻擊力提升<color\=#2899FF>(.*)</color>點。\n(.*)層：自身造成傷害提升<color\=#2899FF>(.*)</color>，其他怪盜造成傷害提升<color\=#2899FF>(.*)</color>。\n(.*)層：所有怪盜火焰傷害提升<color\=#2899FF>(.*)</color>。\n戰鬥開始獲得(.*)層『淨化之焰』，所有怪盜使用{{A}}技能造成火焰傷害時獲得(.*)層『淨化之焰』。『淨化之焰』持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAura [Inferno Baptism]: Gains the following effects based on how many stacks of [Purifying Flame] Wonder has:\n$2 stack: Increase user's ATK by <color\=#2899FF>$3</color> and other Thieves' ATK by <color\=#2899FF>$4</color>.\n$5 stacks: Increase own DMG Dealt by <color\=#2899FF>$6</color> and other Thieves' DMG Dealt by <color\=#2899FF>$7</color>.\n$8 stacks: Increase all Thieves' Fire DMG by <color\=#2899FF>$9</color>.\nGains $10 stacks of [Purifying Flame] at the start of battle, gain $11 stack of [Purifying Flame] when Thieves deal Fire DMG with a {{A}} skill. Lasts for $12 turns."
 淨化之焰=Purifying Flame
 灼熱煉獄晶石=Fiery Inferno Crystal
 僅可消耗灼熱煉獄晶石=Only use Fiery Inferno Crystal
 
 等離子殲星=<size\=24>Plasma Destroyer</size>
-【回音極湧】=<size\=24>[Echo Surge]</size>
+【回音極湧】=[Echo Surge]
 回音極湧=Echo Surge
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>,\n戰鬥開始時，或任意角色使用{{A}}技能造成萬能屬性傷害後觸發『共鳴』效果，持續(\d+)回合。\n『共鳴』：根據當前隊伍啟動的奏鳴效果數量觸發以下效果。\n至少(\d+)個奏鳴：自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>、萬能屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，所有怪盜獲得(\d+%)效果。\n至少(\d+)個奏鳴：所有怪盜暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>.\nTrigger [Resonance] at the start of battle or after any character deals Almighty damage with a {{A}} skill for $2 turns.\n[Resonance]: Trigger the following effects based on the team's current Sonata.\nAt least $3 Sonata: Increase own ATK by <color\=#2899FF>$4</color> and Almighty DMG by <color\=#2899FF>$5</color>, all Thieves gain $6 of the effect.\nAt least $7 different Sonata: Increase all Thieves' CRIT DMG by <color\=#2899FF>$8</color>."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>,\n戰鬥開始時，或任意角色使用{{A}}技能造成萬能屬性傷害後觸發『共鳴』效果，持續(.*)回合。\n『共鳴』：根據當前隊伍啟動的奏鳴效果數量觸發以下效果。\n至少(.*)個奏鳴：自身攻擊力提升<color\=#2899FF>(.*)</color>、萬能屬性傷害提升<color\=#2899FF>(.*)</color>，所有怪盜獲得(.*)效果。\n至少(.*)個奏鳴：所有怪盜暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>.\nTriggers [Resonance] at the start of battle or after any character deals Almighty DMG with a {{A}} skill for $2 turns.\n[Resonance]: Triggers effects based on active Sonata effects:\nAt least $3 Sonata: Increase user's ATK by <color\=#2899FF>$4</color> and Almighty DMG by <color\=#2899FF>$5</color>, all Thieves gain $6 of this effect.\nAt least $7 Sonata: Increase all Thieves' Crit DMG by <color\=#2899FF>$8</color>."
 共鳴=Resonance
 等離子殲星晶石=<size\=16>Plasma Destroyer Crystal</size>
 僅可消耗等離子殲星晶石=Only use Plasma Destroyer Crystal
 
-極晝=Midnight Sun
-【遷移效應】=<size\=24>[Shift Effect]</size>
-遷移效應=Shift Effect
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，在切換{{A}}的回合，攻擊力翻倍提升。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color>, double this effect on turns when you change {{A}}."
+蟲巢衛士=Hive Guardian
+【寄生感染】=[Parasitic Infection]
+寄生感染=Parasitic Infection
+r:"^寄<color\=#000000>生</color>感染$"="P<color\=#000000>a</color>rasitic Infection"
+r:"^效果命中提升<color\=#2899FF>(.*)</color>。\n自身造成的元素異常/精神異常附著率提升<color\=#2899FF>(.*)</color>，成功使敵人陷入任意異常狀態時額外使其陷入『寄生感染』，受到傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。\n場上存在陷入『寄生感染』狀態的敵人時，自身效果命中提升<color\=#2899FF>(.*)</color>、攻擊力提升<color\=#2899FF>(.*)</color>）。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>.\nIncrease the base chance to inflict Elemental Ailments/Mental Ailments by <color\=#2899FF>$2</color>, inflicts the target with [Parasitic Infection] when inflicting any debuffs, increase DMG Taken by <color\=#2899FF>$3</color> for $4 turns. \nIncrease own Ailment ACC by <color\=#2899FF>$5</color> and ATK by <color\=#2899FF>$6</color> when there is a foe with [Parasitic Infection]."
+r:"^效果命中提升<color\=#2899FF>(.*)</color>。\n自身造成的元素異常/精神異常附著率提升<color\=#2899FF>(.*)</color>，成功使敵人陷入任意異常狀態時額外使其陷入『寄生感染』，受到傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。\n場上存在陷入『寄生感染』狀態的敵人時，自身效果命中提升<color\=#2899FF>(.*)</color>、攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>.\nIncrease the base chance to inflict Elemental Ailments/Mental Ailments by <color\=#2899FF>$2</color>, inflicts the target with [Parasitic Infection] when inflicting any debuffs, increase DMG Taken by <color\=#2899FF>$3</color> for $4 turns. \nIncrease own Ailment ACC by <color\=#2899FF>$5</color> and ATK by <color\=#2899FF>$6</color> when there is a foe with [Parasitic Infection]."
+蟲巢衛士晶石=<size\=19>Hive Guardian Crystal</size>
+僅可消耗蟲巢衛士晶石=Only use Hive Guardian Crystal
 
+磁暴干擾者=<size\=22>Magnetic Disruptor</size>
+【磁化電漿】=[Magnetized Plasma]
+磁化電漿=Magnetized Plasma
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n進入戰鬥時，自身獲得<color\=#2899FF>(.*)</color>的暴擊率提升。\n戰鬥中，任意角色使用{{A}}技能造成電擊屬性傷害後，給所有角色添加持續(.*)回合的『磁化電漿』。『磁化電漿』：造成的傷害提升<color\=#2899FF>(.*)</color>，造成電擊屬性傷害時，暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAt the start of battle, increase own Crit Rate by <color\=#2899FF>$2</color>.\nAfter any character uses a {{A}} skill to deal Elec DMG, gives the party [Magnetized Plasma] for $3 turns. [Magnetized Plasma]: Increase DMG Dealt by <color\=#2899FF>$4</color>; Increase Crit DMG when dealing Elec DMG by <color\=#2899FF>$5</color>."
+磁暴干擾者晶石=<size\=15>Magnetic Disruptor Crystal</size>
+僅可消耗磁暴干擾者晶石=Only use Magnetic Disruptor Crystal
+
+{{A}}咒刃=Cursed Blade
+【{{A}}詛咒】=[Spectral Curse]
+{{A}}詛咒=Spectral Curse
+r:"^效果命中提升<color\=#2899FF>(.*)</color>。\n任意角色使用(.*)技能造成詛咒屬性傷害後，WONDER有(.*)的基礎機率為目標添加『(.*)詛咒』，自身攻擊擁有『(.*)詛咒』的敵人時，攻擊力提升<color\=#2899FF>(.*)</color>。\n『(.*)詛咒』：防禦降低<color\=#2899FF>(.*)</color>，受到的詛咒屬性傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>. \nAfter any character deal Curse damage with a Persona skill, Wonder has a $3 base chance to inflict [Spectral Curse] on the target. Also, when user deals damage to foes with [Spectral Curse], increase ATK by <color\=#2899FF>$6</color>.\n[Spectral Curse]: Decrease DEF by <color\=#2899FF>$8</color> and increase Curse DMG Taken by <color\=#2899FF>$9</color> for $10 turns."
+防禦降低，受到的詛咒屬性傷害額外提升=Decrease DEF, increase Curse DMG Taken
+r:"^攻擊擁有『{{A}}詛咒』的敵人時，攻擊力提升(.*)$"="When attacking foes with [Spectral Curse],\nincrease ATK by $1"
+r:"^惡<color\=#000000>靈</color>詛咒$"="S<color\=#000000>p</color>ectral Curse"
+{{A}}咒刃晶石=<size\=19>Cursed Blade Crystal</size>
+僅可消耗{{A}}咒刃晶石=Only use Cursed Blade Crystal
+
+冰河永寂=Eternal Glacier
+【極寒刻印】=[Baltic Brand]
+極寒刻印=Baltic Brand
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n進入戰鬥時為(\d+)名同伴添加『極寒刻印』，WONDER以同伴為目標釋放{{A}}技能時，額外為主目標添加『極寒刻印』(場上唯一)。場上存在擁有『極寒刻印』的同伴時，WONDER造成的傷害提升<color\=#2899FF>(.*)</color>。\n『極寒刻印』：造成的傷害提升<color\=#2899FF>(.*)</color>，造成的冰凍屬性傷害額外提升<color\=#2899FF>(.*)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAt the start of battle, grant $2 ally [Baltic Brand]. When Wonder uses a {{A}} skill on allies, grant the main target [Baltic Brand] (there can only be 1). When there is an ally with [Baltic Brand] on the field, increase Wonder's DMG Dealt by <color\=#2899FF>$3</color>. \n[Baltic Brand]: Increase DMG Dealt by <color\=#2899FF>$4</color>, additionally increase Ice DMG Dealt by <color\=#2899FF>$5</color>. Last for $6 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n進入戰鬥時為(\d+)名同伴添加『極寒刻印』，WONDER以同伴為目標釋放{{A}}技能時，額外為主目標添加『極寒刻印』（場上唯一）。場上存在擁有『極寒刻印』的同伴時，WONDER造成的傷害提升<color\=#2899FF>(.*)</color>。\n『極寒刻印』：造成的傷害提升<color\=#2899FF>(.*)</color>，造成的冰凍屬性傷害額外提升<color\=#2899FF>(.*)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAt the start of battle, grant $2 ally [Baltic Brand]. When Wonder uses a {{A}} skill on allies, grant the main target [Baltic Brand] (there can only be 1). When there is an ally with [Baltic Brand] on the field, increase Wonder's DMG Dealt by <color\=#2899FF>$3</color>. \n[Baltic Brand]: Increase DMG Dealt by <color\=#2899FF>$4</color>, additionally increase Ice DMG Dealt by <color\=#2899FF>$5</color>. Last for $6 turns."
+r:"^極<color\=#000000>寒</color>刻印$"="B<color\=#000000>a</color>ltic Brand"
+冰河永寂晶石=<size\=18>Eternal Glacier Crystal</size>
+僅可消耗冰河永寂晶石=Only use Eternal Glacier Crystal
+
+極晝=Midnight Sun
+【遷移效應】=[Shift Effect]
+遷移效應=Shift Effect
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。攻擊力提升<color\=#2899FF>(.*)</color>，在切換{{A}}的回合，攻擊力翻倍提升。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> more and double this effect after changing {{A}}s for 1 turn."
 致命匕首=<size\=30>Deadly Dagger</size>
+【解離】=[Disintegrate]
+解離=Disintegrate
+r:"^每裝配1個{{A}}，攻擊力額外提升<color\=#2899FF>(.*)</color>。$"="For every equipped {{A}}, additionally increase ATK by <color\=#2899FF>$1</color>."
 烏茲鋼刀=<size\=24>Wootz Steel Knife</size>
+【尖利】=[Keen]
+尖利=Keen
 
 ----------
 MAIN CAST WEAPONS
 ----------
+WONDER專屬近戰武器。=Exclusive melee weapon for Wonder.
+{{A}}專屬近戰武器。=Exclusive melee weapon for {{A}}.
 {{A}}使用=Used by {{A}}
-神降光輝=God's Glory
-【鴞之火羽】=<size\=24>[Owl's Fire Plume]</size>
-鴞之火羽=Owl's Fire Plume
-r:"^治療加成提升<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|115"><u>『星之火』</u></link>使同伴受治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>，並且<link\="s\|115"><u>『星之火』</u></link>使同伴攻擊力額外提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Healing Boost by <color\=#2899FF>$1</color>. <link\="s|115"><u>[Starfire]</u></link> increase allies' Healing Received by <color\=#2899FF>$2</color> and ATK by <color\=#2899FF>$3</color>."
+{{A}} 使用=Used by {{A}}
+神降光輝=Fallen Angel Wing
+【鴞之火羽】=[Plume of Knowledge]
+鴞之火羽=Plume of Knowledge
+r:"^治療加成提升<color\=#2899FF>(.*)</color>。<link\="s\|115"><u>『星之火』</u></link>使同伴受治療效果提升<color\=#2899FF>(.*)</color>，並且<link\="s\|115"><u>『星之火』</u></link>使同伴攻擊力額外提升<color\=#2899FF>(.*)</color>。$"="Increase Healing Effect by <color\=#2899FF>$1</color>. For each <link\="s|115"><u>[Starfire]</u></link> stack on allies, increase Healing Received by <color\=#2899FF>$2</color>, and increase ATK by <color\=#2899FF>$3</color>."
 熔岩之火=Lava Flame
-【浴火重生】=<size\=24>[Rise from the Ashes]</size>
-浴火重生=Rise from the Ashes
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。場上存在<link\="s\|115"><u>『星之火』</u></link>時，根據場上<link\="s\|115"><u>『星之火』</u></link>的數量，治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When <link\="s|115"><u>[Starfire]</u></link> is present, increase Healing Effect by <color\=#2899FF>$2</color> based on the number of <link\="s|115"><u>[Starfire]</u></link>. "
-電磁類星體=Electromagnetic Quasar
-【雷暴天象】=<size\=24>[Celestial Thunderstorm]</size>
-雷暴天象=Celestial Thunderstorm
-r:"電擊傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。釋放{{A}}技能後獲得1層『電磁風暴』：使自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，若存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人則額外獲得1層，上限3層，效果持續2回合。『電磁風暴』為滿層時使所有怪盜造成的電擊屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Elec DMG by <color\=#2899FF>$1</color>. After using a Persona skill, gain 1 stack of [Electromagnetic Storm]: Increase ATK by <color\=#2899FF>$2</color> for 2 turns, gain 1 additional stack if there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>, up to 3 stacks. Increase all allies' Elec DMG Dealt by <color\=#2899FF>$3</color> when [Electromagnetic Storm] is at maxed stacks."
-電磁風暴=Electromagnetic Storm
+【浴火重生】=[Blaze of Rebirth]
+浴火重生=Blaze of Rebirth
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。場上存在<link\="s\|115"><u>『星之火』</u></link>時，根據場上<link\="s\|115"><u>『星之火』</u></link>的數量，治療效果提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. If <link\="s|115"><u>[Starfire]</u></link> is active, increase Healing Effect by <color\=#2899FF>$2</color> per stack of <link\="s|115"><u>[Starfire]</u></link>."
+衝鋒拐=Break Tonfa
+【熱療】=[Healing Warmth]
+熱療=Healing Warmth
+r:"^造成<link\="s\|102"><u>燃燒</u></link>效果後，治療效果永久提升<color\=#2899FF>(.*)</color>。$"="After inflicting <link\="s|102"><u>Burn</u></link>, permanently increase Healing Effect by <color\=#2899FF>$1</color>."
+浮萍拐=Basic Tonfa
+【合金】=[Superalloy]
+合金=Superalloy
+
+電磁類星體=Quasar
+【雷暴天象】=[Thunderstorm]
+雷暴天象=Thunderstorm
+r:"電擊傷害提升<color\=#2899FF>(.*)</color>。釋放{{A}}技能後獲得1層『電磁風暴』：使自身攻擊力提升<color\=#2899FF>(.*)</color>，若存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人則額外獲得1層，上限3層，效果持續2回合。『電磁風暴』為滿層時使所有怪盜造成的電擊屬性傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Electric DMG by <color\=#2899FF>$1</color>. After using a skill, gain 1 [Thundercloud] stack: Increase user's ATK by <color\=#2899FF>$2</color>. Gain 1 more stack if there are any Shocked foes. Lasts 2 turns. Stacks up to 3 times. When [Thundercloud] is at max stacks, increase party's Electric DMG by <color\=#2899FF>$3</color>."
+電磁風暴=Thundercloud
+r:"^電<color\=#000000>磁</color>風暴$"="T<color\=#000000>h</color>undercloud"
 罪與罰=Crime and Punishment
-【電磁爆發】=<size\=24>[Electromagnetic Burst]</size>
-電磁爆發=Electromagnetic Burst
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人時，使{{A}}的攻擊力提升<color\=#2899FF>(\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> if there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>."
-始祖冰河=Ancestral Glacier
-【冰原禮讚】=<size\=24>[Praise of Ice Field]</size>
-冰原禮讚=<size\=24>Praise of Ice Field</size>
-r:"^最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。觸發<link\="s\|151"><u>『荒野救星』</u></link>的回復效果時，有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率使生命值最低的同伴獲得相同效果。自身受到攻擊時，使攻擊的敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，效果持續1回合。$"="Increase Max HP by <color\=#2899FF>$1</color>. When triggering the heal from <link\="s|151"><u>Wilderness Savior</u></link>, there is a <color\=#2899FF>$2</color> fixed chance for the lowest HP ally to get the same effect. Decrease the enemy's DEF by <color\=#2899FF>$3</color> for 1 turn when attacked."
-噬魔=Demon Devourer
-【堅固利刃】=<size\=24>[Solid Sharp Blade]</size>
-堅固利刃=Solid Sharp Blade
-r:"^最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。處於<link\="s\|151"><u>『荒野救星』</u></link>狀態下，額外使自身最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>、防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>、效果抵抗提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. When in <link\="s|151"><u>[Wilderness Savior]</u></link>, increase Max HP by <color\=#2899FF>$2</color>, DEF by <color\=#2899FF>$3</color> and Effect RES by <color\=#2899FF>$4</color>."
-忍具·天與刃翼=Shinobi Tool: Winged Sky Blade
-【影舞】=<size\=24>[Shadow Dance]</size>
-影舞=Shadow Dance
-r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。每擊破2個『破綻』，額外獲得<color\=#2899FF>(\d+)</color>份『情報』；同時全體夥伴獲得<color\=#2899FF>(\d+\.\d+%)</color>的傷害提升，持續1回合。『情報』上限層數提升至<color\=#2899FF>(\d+)</color>層。$"="Increase SPD by <color\=#2899FF>$1</color>. For every 2 [Vulnerability] broken, gain <color\=#2899FF>$2</color> extra stacks of [Intel] and increase all allies's DMG Dealt by <color\=#2899FF>$3</color> for 1 turn. Increase the cap of Intel to <color\=#2899FF>$4</color>."
-花見緋梅=Plum Viewing
-【含苞】=<size\=24>[Budding]</size>
-含苞=Budding
-r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。每次『破綻』被擊破時，使所有同伴獲得以下效果之一：攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>，生命值提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合；同時有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率使{{A}}額外獲得(\d+)份『情報』。$"="Increase Speed by <color\=#2899FF>$1</color>. When breaking [Vulnerability], give all allies one of the following effect for $5 turns: Increase ATK by <color\=#2899FF>$2</color>, increase DEF by <color\=#2899FF>$3</color>, increase HP by <color\=#2899FF>$4</color>; There is a <color\=#2899FF>$6</color> fixed chance for you to gain $7 additional [Intel]."
-霽月銀勾=Bright Moon Hook
-【水中月】=<size\=24>[Moon in Water]</size>
-水中月=Moon in Water
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每次『破綻』被擊破時，使所有同伴攻擊力永久提升<color\=#2899FF>(\d+\.\d+%)</color>，最多可疊加5層。$"="Increase ATK by <color\=#2899FF>$1</color>. Permanently increase all allies' ATK by <color\=#2899FF>$2</color> after breaking a [Vulnerability], up to 5 stacks."
+【電磁爆發】=[Shock of Atonement]
+電磁爆發=Shock of Atonement
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人時，使{{A}}的攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. If there are any Shocked foes, increase ATK by <color\=#2899FF>$2</color>."
+雷鳴鏈球=Lightning Hammer
+【超載】=[Overloader]
+超載=Overloader
+r:"^戰鬥開始時，攻擊力提升<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="At the start of battle, increase ATK by <color\=#2899FF>$1</color> for $2 turns."
+鏈球=Swinging Hammer
+【鈍重】=[Solemnity]
+鈍重=Solemnity
+
+始祖冰河=Permafrost
+【冰原禮讚】=[Tundra's Eminence]
+冰原禮讚=Tundra's Eminence
+r:"^最大生命值提升<color\=#2899FF>(.*)</color>。觸發<link\="s\|151"><u>『荒野救星』</u></link>的回復效果時，有<color\=#2899FF>(.*)</color>的固定機率使生命值最低的同伴獲得相同效果。自身受到攻擊時，使攻擊的敵人防禦力降低<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="Increase Max HP by <color\=#2899FF>$1</color>. When activating <link\="s|151"><u>[Desperado]</u></link>'s healing effect, <color\=#2899FF>$2</color> chance to grant the same effect to the ally with the lowest remaining HP. When taking an attack, decrease the attacker's DEF by <color\=#2899FF>$3</color> for $4 turn."
+噬魔=Demon's Bite
+【堅固利刃】=[Sturdy Blade]
+堅固利刃=Sturdy Blade
+r:"^最大生命值提升<color\=#2899FF>(.*)</color>。處於<link\="s\|151"><u>『荒野救星』</u></link>狀態下，額外使自身最大生命值提升<color\=#2899FF>(.*)</color>、防禦力提升<color\=#2899FF>(.*)</color>、效果抵抗提升<color\=#2899FF>(.*)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. While <link\="s|151"><u>[Desperado]</u></link> is active, increase Max HP by <color\=#2899FF>$2</color> more, DEF by <color\=#2899FF>$3</color>, and Ailment RES by <color\=#2899FF>$4</color>."
+鑄鐵手斧=Steel Tomahawk
+【碎冰】=[Ice Breaker]
+碎冰=Ice Breaker
+r:"^以友方為目標釋放技能時，會使生命值最低的友方獲得相當於自身<color\=#2899FF>(.*)</color>最大生命值的護盾，效果持續(.*)回合。$"="When using a skill on allies, grants the lowest HP ally <color\=#2899FF>$1</color> Max HP Shield for $2 turns."
+西部手斧=Tomahawk
+【隕鐵】=[Meteoric Iron]
+隕鐵=Meteoric Iron
+
+忍具·天與刃翼=Kunoichi: Sky's Edge
+【影舞】=[Shadowdance]
+影舞=Shadowdance
+r:"^速度提升<color\=#2899FF>(.*)</color>。每擊破(.*)個『破綻』，額外獲得<color\=#2899FF>(.*)</color>份『情報』；同時全體夥伴獲得<color\=#2899FF>(.*)</color>的傷害提升，持續(.*)回合。『情報』上限層數提升至<color\=#2899FF>(.*)</color>層。$"="Increase Speed by <color\=#2899FF>$1</color>. For every $2 [Insight] stack spent, gain <color\=#2899FF>$3</color> [Intel] stacks. Also, increase party's damage by <color\=#2899FF>$4</color> for $5 turn. Increase max stacks of [Intel] to <color\=#2899FF>$6</color>."
+花見緋梅=Red Plum Blossom
+【含苞】=[Budding]
+r:"^速度提升<color\=#2899FF>(.*)</color>。每次『破綻』被擊破時，使所有同伴獲得以下效果之一：攻擊力提升<color\=#2899FF>(.*)</color>，防禦力提升<color\=#2899FF>(.*)</color>，生命值提升<color\=#2899FF>(.*)</color>，持續(.*)回合；同時有<color\=#2899FF>(.*)</color>的固定機率使{{A}}額外獲得(.*)份『情報』。$"="Increase Speed by <color\=#2899FF>$1</color>. When breaking [Insight], randomly grant 1 of the following effects to the party:\nIncrease ATK by <color\=#2899FF>$2</color> (2 turns);\nIncrease DEF by <color\=#2899FF>$3</color> (2 turns);\nIncrease max HP by <color\=#2899FF>$4</color> (2 turns);\nAlso, <color\=#2899FF>$6</color> chance to gain $7 [Intel] stack."
+霽月銀勾=Moonlight Needle
+【水中月】=[Lunar Reflection]
+水中月=Lunar Reflection
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。每次『破綻』被擊破時，使所有同伴攻擊力永久提升<color\=#2899FF>(.*)</color>，最多可疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. For each [Insight] stack spent, permanently increase party's ATK by <color\=#2899FF>$2</color>. Stacks up to $3 times."
+刀藏傘=Peculiar Parasol
+【散華】=[Scattered Flowers]
+散華=Scattered Flowers
+r:"^進入戰鬥時，使所有同伴的攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="At the start of battle, increase party's ATK by <color\=#2899FF>$1</color> for $2 turns."
+蛇眼傘=Snake Eye Umbrella
+【花與刃】=[Blossom and Blade]
+花與刃=Blossom and Blade
+
+白夜星諭=White Night Prophecy
+【星墜王庭】=[Starfall Court]
+星墜王庭=Starfall Court
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n對同伴釋放{{A}}技能時，若目標擁有祝福效果，則使其造成傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。自身處於不同『即興表演』狀態釋放{{A}}技能時，自身攻擊力永久提升<color\=#2899FF>(.*)</color>，上限(.*)層，所有同伴獲得(.*)的效果。$"="Increase ATK by <color\=#2899FF>$1</color>.\nWhen using a {{A}} skill on allies, if the target have Blessing, then increase their DMG Dealt by <color\=#2899FF>$2</color> for $3 turns. When using a {{A}} skill under different [Improv], permanently increase user's ATK by <color\=#2899FF>$4</color>. Stacks up to $5 times. All allies gain $6 of this effect."
+聖誓加冕=Coronation Oath
+【神諭冠冕】=[Divine Diadem]
+神諭冠冕=Divine Diadem
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身添加祝福效果後，自身攻擊力提升<color\=#2899FF>(.*)</color>，效果命中提升<color\=#2899FF>(.*)</color>，持續(.*)回合，上限(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAfter granting Blessing, increase user's ATK by <color\=#2899FF>$2</color> and Ailment ACC by <color\=#2899FF>$3</color> for $4 turns. Stacks up to $5 times."
+幻幕迭生=Unfolding Veil
+【幕中之幕】=[Curtain Within Curtain]
+幕中之幕=Curtain Within Curtain
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身對友方同伴釋放{{A}}技能後，自身效果命中提升<color\=#2899FF>(.*)</color>，技能目標獲得(.*)加成，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAfter using a {{A}} skill on allies, increase user's Ailment ACC by <color\=#2899FF>$2</color> for $4 turns, the skill target gains $3 of this effect."
+青耀劍=Azure Blade
+【蒼月夜曲】=[Blue Moon Serenade]
+蒼月夜曲=Blue Moon Serenade
+r:"^自身添加元素異常後，使自身祝福屬性傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="After inflicting Elemental Ailments, increase own Bless DMG by <color\=#2899FF>$1</color> for $2 turns."
+闊劍=Broadsword
+【鐵幕之辭】=[Iron Curtain Call]
+鐵幕之辭=Iron Curtain Call
 
 ----------
 LIMITED 5 STAR WEAPONS
 ----------
-不死鳥=Phoenix
-【咒殺萬物】=<size\=24>[Curse of Destruction]</size>
+不死鳥=Phoenix Dagger
+【咒殺萬物】=[Curse of Destruction]
 咒殺萬物=Curse of Destruction
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。獲得<link\="s\|124"><u>『煞氣』</u></link>時，提升自身造成的詛咒傷害<color\=#2899FF>(\d+\.\d+%)</color>，持續2回合，可疊加3層。若<link\="s\|124"><u>『煞氣』</u></link>達到了3層，則使自身下1次攻擊造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase Curse DMG by <color\=#2899FF>$2</color> after gaining <link\="s|124">[Fury]</u></link> for 2 turns, up to 3 stacks. Increase your next attack by <color\=#2899FF>$3</color> when <link\="s|124">[Fury]</u></link> reaches 3 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。獲得<link\="s\|124"><u>『煞氣』</u></link>時，提升自身造成的詛咒傷害<color\=#2899FF>(.*)</color>，持續(.*)回合，可疊加(.*)層。若獲得<link\="s\|124"><u>『煞氣』</u></link>且層數不少於(.*)層，則使自身下1次攻擊造成的傷害提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. After gaining <link\="s|124">[Will of Rebellion]</u></link>, increase Ren's Curse DMG by <color\=#2899FF>$2</color> for $3 turns. Stacks up to $4 times. At $5 or more <link\="s|124">[Will of Rebellion]</u></link> stacks, increase Ren's next DMG by <color\=#2899FF>$6</color>."
 開山刀=Machete
-【惡兆將至】=<size\=24>[Coming Omen]</size>
+【惡兆將至】=[Coming Omen]
 惡兆將至=Coming Omen
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。攻擊身上帶有異常狀態的敵人時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> when attacking enemies with debuffs."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。攻擊身上帶有異常狀態的敵人時，攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When attacking a foe with an ailment, increase ATK by <color\=#2899FF>$2</color>."
+儀式小刀=Athame
+【索命】=[Claiming Life]
+索命=Claiming Life
+r:"^對敵人造成詛咒屬性傷害時，有<color\=#2899FF>(.*)</color>基礎機率使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。$"="When dealing Curse DMG to foes, there is a <color\=#2899FF>$1</color> base chance to inflict them with $2 stack of <link\="s|112"><u>Curse</u></link>."
+冰封匕首=Blizz Dagger
+【銳利】=[Sharp]
+銳利=Sharp
 
-虛擬干擾者=Virtual Disruptor
-【人工智慧】=<size\=24>[Artificial Intelligence]</size>
-人工智慧=Artificial Intelligence
-r:"^<nobr>暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。追擊造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。若『玩伴』觸發了追擊或同伴釋放了電擊屬性的技能觸發了追擊，則使得{{A}}追擊造成的傷害額外提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="<nobr>Increase CRIT Rate by <color\=#2899FF>$1</color>. Increase DMG Dealt by Follow Up by <color\=#2899FF>$2</color>. Increase Follow Up DMG Dealt by <color\=#2899FF>$3</color> if [Playmate] trigged your Follow Up or an ally triggered your Follow Up after using an Elec skill."
-未來指令=Future Directive
-【編碼重構】=<size\=24>[Code Refactoring]</size>
-編碼重構】=Code Refactoring
-r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。造成追擊後，使{{A}}造成的電擊屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。效果持續(\d+)回合，可疊加(\d+)層。$"="Increase CRIT Rate by <color\=#2899FF>$1</color>. After triggering Follow Up, increase own Elec DMG Dealt by <color\=#2899FF>$2</color> for $3 turn, up to $4 stacks."
+虛擬干擾者=Cyber Jammers
+【人工智慧】=[AI Optimization]
+人工智慧=AI Optimization
+r:"^<nobr>暴擊率提升<color\=#2899FF>(.*)</color>。追擊造成的傷害提升<color\=#2899FF>(.*)</color>。若『玩伴』觸發了追擊或同伴釋放了電擊屬性的技能觸發了追擊，則使得{{A}}追擊造成的傷害額外提升<color\=#2899FF>(.*)</color>。$"="Increase Crit Rate by <color\=#2899FF>$1</color>. Increase Follow Up DMG by <color\=#2899FF>$2</color>. When a Follow Up attack is activated by an ally with Player 2, or by an ally dealing Elec damage with a skill, increase Follow Up DMG by <color\=#2899FF>$3</color> more."
+未來指令=Meta Directors
+【編碼重構】=[Refactor]
+編碼重構】=Refactor
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>。造成追擊後，使{{A}}造成的電擊屬性傷害提升<color\=#2899FF>(.*)</color>。效果持續(.*)回合，可疊加(.*)層。$"="Increase Crit Rate by <color\=#2899FF>$1</color>. When performing a Follow Up attack, increase Elec DMG by <color\=#2899FF>$2</color> for $3 turn. Stacks up to $4 times."
+伏特雙環=Electric Chakrams
+【除顫儀】=[Electric Shock]
+除顫儀=Electric Shock
+r:"^對處於<link\="s\|104"><u>觸電</u></link>狀態下的敵人攻擊力提升<color\=#2899FF>(.*)</color>。$"="When attacking a <link\="s|104"><u>Shocked</u></link> foe, increase ATK by <color\=#2899FF>$1</color>."
+雙環=Twin Chakrams
+【磁感】=[Magnetism]
+磁感=Magnetism
 
-金紋影切=Golden Shadow Slasher
-【冰之演武】=<size\=24>[Ice Martial Practice]</size>
-冰之演武=Ice Martial Practice
-r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。進入戰鬥反擊傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，獲得護盾效果時獲得『護靈』1個，每有1個『護靈』，反擊傷害提升2%。若『護靈』數量到達了6，則反擊傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，本場戰鬥永久生效。$"="Increase DEF by <color\=#2899FF>$1</color>. At the start of battle, increase Counter DMG by <color\=#2899FF>$2</color>. Gain 1 [Guardian Spirit] when gaining Shield, increase Counter DMG by 2% with each [Guardian Spirit] you have. Increase Counter DMG by <color\=#2899FF>$2</color> permanently if you have 6 [Guardian Spirit]."
-居合刀=Iai Katana
-【無心空刃】=<size\=24>[Heartless Blade]</size>
-無心空刃=Heartless Blade
-r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。每次觸發反擊，冰凍傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，上限(\d+)層，效果持續(\d+)回合，持續時間獨立計算。$"="Increase DEF by <color\=#2899FF>$1</color>. Each time you Counter, increase Ice DMG by <color\=#2899FF>$2</color> for $4 turns, up to $3 stacks, each stacks count down independently."
+金紋影切=Shadowkiller
+【冰之演武】=[Chilling Display]
+冰之演武=Chilling Display
+r:"^防禦力提升<color\=#2899FF>(.*)</color>。進入戰鬥反擊傷害提升<color\=#2899FF>(.*)</color>，獲得護盾效果時獲得『護靈』1個，每有1個『護靈』，反擊傷害提升(.*)。若『護靈』數量到達了(.*)，則反擊傷害提升<color\=#2899FF>(.*)</color>，本場戰鬥永久生效。$"="Increase DEF by <color\=#2899FF>$1</color>. At the start of battle, increase Counterattack DMG by <color\=#2899FF>$2</color>. After gaining a shield, gain 1 [Blade Spirit] stack. Increase Counterattack DMG by $3 per stack. At $4 stacks, increase Counterattack DMG by <color\=#2899FF>$5</color>. This effect is permanent."
+護靈=Guardian Spirit
+r:"^護<color\=#000000>靈</color>$"="B<color\=#000000>l</color>ade Spirit"
+居合刀=Jagato
+【無心空刃】=[Enlightened Strike]
+無心空刃=Enlightened Strike
+r:"^防禦力提升<color\=#2899FF>(.*)</color>。每次觸發反擊，冰凍傷害提升<color\=#2899FF>(.*)</color>，上限(.*)層，效果持續(.*)回合，持續時間獨立計算。$"="Increase DEF by <color\=#2899FF>$1</color>. Each time a Counterattack is activated, increase Ice DMG by <color\=#2899FF>$2</color> for $4 turns. Stacks up to $3 times. Stacks are spent separately."
+制式刀=Seishiki Sword
+【心劍】=[Heart of the Blade]
+心劍=Heart of the Blade
+r:"^受到處於<link\="s\|103"><u>凍結</u></link>狀態的敵人的傷害時，該傷害額外降低<color\=#2899FF>(.*)</color>。$"="Decrease DMG Taken from <link\="s|103"><u>Frozen</u></link> foes by <color\=#2899FF>$1</color>."
+斬銅刀=Katana
+【刀魂】=[Arm of the Soul]
+刀魂=Arm of the Soul
 
-核熱終結=Nuclear's End
-【湮滅意志】=<size\=24>[Annihilating Will]</size>
-湮滅意志=Annihilating Will
-r:"^核熱傷害提升<color\=#2899FF>(\d+\.\d+%)</color>；攻擊處於元素異常狀態下的敵人，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>；任意同伴造成元素異常狀態時，自身獲得1層『熱能』。進入『鐵血意志』時，消耗所有『熱能』，每層『熱能』提升下一次技能<color\=#2899FF>(\d+\.\d+%)</color>核熱傷害，上限<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Nuke DMG by <color\=#2899FF>$1</color>; Increase ATK by <color\=#2899FF>$2</color> when attacking enemies with Element Ailments; Gain 1 stack of [Heat Energy] when any ally inflicts Element Ailments. Consume all [Heat Energy] when entering [Iron Will], increase the Nuke DMG of your next skill by <color\=#2899FF>$3</color> with each stack consumed, up to <color\=#2899FF>$4</color>."
-熱能=Heat Energy
-馬赫拳套=Mach Punch
-【不熄心火】=<size\=24>[Inextinguishable]</size>
-不熄心火=Inextinguishable
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>；造成核熱傷害時，每層<link\="s\|177"><u>『堅韌』</u></link>使該傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>; When dealing Nuke damage, each stack of <link\="s|177"><u>[Tenacity]</u></link> increase that damage by <color\=#2899FF>$2</color>."
+核熱終結=Nuclear Finisher
+【湮滅意志】=[Will of Extinction]
+湮滅意志=Will of Extinction
+r:"^核熱傷害提升<color\=#2899FF>(.*)</color>；攻擊處於元素異常狀態下的敵人，攻擊力提升<color\=#2899FF>(.*)</color>；任意同伴造成元素異常狀態時，自身獲得1層『熱能』。進入『鐵血意志』時，消耗所有『熱能』，每層『熱能』提升下一次技能<color\=#2899FF>(.*)</color>核熱傷害，上限<color\=#2899FF>(.*)</color>。$"="Increase Nuke DMG by <color\=#2899FF>$1</color>. When attacking a foe with an Elemental Ailment, increase ATK by <color\=#2899FF>$2</color>. When an ally inflicts an Elemental Ailment, gain 1 [Heat] stack. When [Crash Out] is active, spend all [Heat] stacks to increase next Nuke skill damage by <color\=#2899FF>$3</color> for each [Heat] stack, up to <color\=#2899FF>$4</color>."
+熱能=Heat
+r:"^提升(.*)下一次{{A}}技能核熱傷害$"="<size\=26>Increase next {{A}} skill Nuke DMG by $1</size>"
+馬赫拳套=Omega Knuckle
+【不熄心火】=[Fortitude]
+不熄心火=Fortitude
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>；造成核熱傷害時，每層<link\="s\|177"><u>『堅韌』</u></link>使該傷害提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When dealing Nuke damage, increase damage by <color\=#2899FF>$2</color> for each <link\="s|177"><u>[Tenacity]</u></link> stack granted."
+重擊拳套=Flash Punch
+【正義】=[Justice]
+r:"^每回合開始時，攻擊力提升<color\=#2899FF>(.*)</color> ，可疊加(.*)層。$"="At the start of the turn, increase ATK by <color\=#2899FF>$1</color>. Stacks up to $2 times."
+三角拳套=Brass Knuckles
+【堅壁】=[Iron Fist]
+堅壁=Iron Fist
 
-萬眾矚目之星=Eye-Catching Star
-【狂熱皈依】=<size\=24>[Fervent Refuge]</size>
-狂熱皈依=Fervent Refuge
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>；戰鬥開始時候，立刻獲得<color\=#2899FF>(\d+\.\d+%)</color>的HL能量；<link\="s\|190"><u>『忠實聽眾』</u></link>攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，友方同伴每次使用HL，<link\="s\|190"><u>『忠實聽眾』</u></link>的攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，可疊加3層。$"="Increase ATK by <color\=#2899FF>$1</color>; At the start of battle, immediately gain <color\=#2899FF>$2</color> HIGHLIGHT Energy; Increase ATK of the <link\="s|190"><u>[Loyal Listener]</u></link> by <color\=#2899FF>$3</color>. Increase ATK of the <link\="s|190"><u>[Loyal Listener]</u></link> by <color\=#2899FF>$4</color> each time an ally uses HIGHLIGHT, up to 3 stacks."
-獨唱搖滾=Solo Rock
-【節奏風暴】=<size\=24>[Rhythm Storm]</size>
-節奏風暴=Rhythm Storm
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，使用『終曲：音域全開』後，自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> after using [Finale: Range Unleash] for $3 turns."
+萬眾矚目之星=Superstar
+【狂熱皈依】=[Groovy Session]
+狂熱皈依=Groovy Session
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>；戰鬥開始時候，立刻獲得<color\=#2899FF>(.*)</color>的HIGHLIGHT能量；<link\="s\|190"><u>『忠實聽眾』</u></link>攻擊力提升<color\=#2899FF>(.*)</color>，友方同伴每次使用HIGHLIGHT/{{A}}，<link\="s\|190"><u>『忠實聽眾』</u></link>的攻擊力提升<color\=#2899FF>(.*)</color>，可疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>; At the start of battle, fill HIGHLIGHT Gauge by <color\=#2899FF>$2</color>. Increase <link\="s|190"><u>[Costar]</u></link>'s ATK by <color\=#2899FF>$3</color>, and each time an ally uses a HIGHLIGHT/{{A}}, increase <link\="s|190"><u>[Costar]</u></link>'s ATK by <color\=#2899FF>$4</color>. Stacks up to $5 times."
+獨唱搖滾=Rock 'n' Roller
+【節奏風暴】=[Tempest of Rhythm]
+節奏風暴=Tempest of Rhythm
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>，使用『終曲：音域全開』後，自身攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After using [Catchy Hook], increase ATK by <color\=#2899FF>$2</color> for $3 turns."
+電音吉他斧=Amped-Up Guitar Axe
+r:"^為隊友釋放{{A}}技能時，自身攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="After an ally uses a {{A}} skill, increase user's ATK by <color\=#2899FF>$1</color> for $3 turns."
+吉他斧=Guitar Axe
+【鳴弦】=[Tone]
+鳴弦=Tone
 
 繽紛海岸=Colorful Coast
-【灼灼炎夏】=<size\=24>[Scorching Summer]</size>
+【灼灼炎夏】=[Scorching Summer]
 灼灼炎夏=Scorching Summer
-r:"^祝福屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|192"><u>『盛夏』</u></link>狀態下，暴擊效果額外提高<color\=#2899FF>(\d+\.\d+%)</color>。自身進入盛夏狀態後，獲得2層日光。使用{{A}}技能或HIGHLIGHT技能時，消耗1層日光，使本次技能傷害提高<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Bless DMG by <color\=#2899FF>$1</color>. Increase CRIT DMG by <color\=#2899FF>$2</color> when you are in <link\="s|192"><u>[Midsummer]</u></link>. Gain 2 stacks of Sunlight when entering Midsummer. When using Persona skills or HIGHLIGHT, consume 1 stack of Sunlight to increase damage by <color\=#2899FF>$3</color>."
-嘟嘟星=Bouncy Star
-【日光浴】=<size\=24>[Sunbathing]</size>
+r:"^祝福屬性傷害提升<color\=#2899FF>(.*)</color>。<link\="s\|192"><u>『盛夏』</u></link>狀態下，暴擊效果額外提高<color\=#2899FF>(.*)</color>。自身進入盛夏狀態後，獲得2層日光。使用{{A}}技能或HIGHLIGHT技能時，消耗1層日光，使本次技能傷害提高<color\=#2899FF>(.*)</color>。$"="Increase Bless DMG by <color\=#2899FF>$1</color>. When <link\="s|192"><u>[Midsummer]</u></link> is active, increase Crit DMG by <color\=#2899FF>$2</color>. When gaining [Midsummer], gain 2 Sunlight stacks. When using a {{A}} skill or HIGHLIGHT, spend 1 Sunlight stack to increase the skill's damage by <color\=#2899FF>$3</color>."
+嘟嘟星=Puff Puff Star
+【日光浴】=[Sunbathing]
 日光浴=Sunbathing
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|192"><u>『盛夏』</u></link>狀態下受到治療時額外獲得<color\=#2899FF>(\d+\.\d+%)</color>傷害提升，持續(\d+)回合，上限(\d+)層。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase damage by <color\=#2899FF>$2</color> when you are healed in <link\="s|192"><u>[Midsummer]</u></link> state for $3 turns, up to $4 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。<link\="s\|192"><u>『盛夏』</u></link>狀態下受到治療時額外獲得<color\=#2899FF>(.*)</color>傷害提升，持續(.*)回合，上限(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. When receiving healing while <link\="s|192"><u>[Midsummer]</u></link> is active, increase damage by <color\=#2899FF>$2</color> more for $3 turns. Stacks up to $4 times."
+花漾水球=Floral Water Ball
+【滌蕩】=[Cleanse]
+滌蕩=Cleanse
+r:"^攻擊敵人時若自身血量高於(.*)，祝福傷害提升<color\=#2899FF>(.*)</color>。$"="When attacking a foe, if user is above $1 HP, increase Bless DMG by <color\=#2899FF>$2</color>."
+水球=Water Ball
+【純水】=[Pure Water]
+純水=Pure Water
 
-波子寶貝=Bubble Sweetheart
-【硝煙墜火】=<size\=24>[Falling Fireworks]</size>
+波子寶貝=Bubble Babies
+【硝煙墜火】=[Falling Fireworks]
 硝煙墜火=Falling Fireworks
-r:"^治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|194"><u>『絢爛煙火』</u></link>造成的技能傷害倍率/治療量提升<color\=#2899FF>(\d+\.\d+%)</color>。敵人受到<link\="s\|194"><u>『絢爛煙火』</u></link>後，受到傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，可疊加(\d+)層。$"="Increase Healing Effect by </size><color\=#2899FF>$1</color>. Increase the damage multiplier/ healing of <link\="s|194"><u>[Gorgeous Fireworks]</u></link> by <color\=#2899FF>$2</color>. After enemies took damage from <link\="s|194"><u>[Gorgeous Fireworks]</u></link>, increase their DMG Taken by <color\=#2899FF>$3</color> for $4 turns, up to $5 stacks."
-潮汐之語=Word of the Tides
-【光影綻放】=<size\=24>[Blooming Shine]</size>
+r:"^治療效果提升<color\=#2899FF>(.*)</color>。<link\="s\|194"><u>『絢爛煙火』</u></link>造成的技能傷害倍率/治療量提升<color\=#2899FF>(.*)</color>。敵人受到<link\="s\|194"><u>『絢爛煙火』</u></link>後，受到傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合，可疊加(.*)層。$"="Increase Healing Effect by <color\=#2899FF>$1</color>. Increase the skill damage multiplier and Healing Effect of <link\="s|194"><u>[Dazzling Fireworks]</u></link> by <color\=#2899FF>$2</color>. When <link\="s|194"><u>[Dazzling Fireworks]</u></link> is inflicted on a foe, increase target's damage taken by <color\=#2899FF>$3</color> for $4 turns. Stacks up to $5 times."
+潮汐之語=Ocean's Tidings
+【光影綻放】=[Blooming Shine]
 光影綻放=Blooming Shine
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。觸發<link\="s\|194"><u>『絢爛煙火』</u></link>後，自身治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After triggering <link\="s|194"><u>[Gorgeous Fireworks]</u></link>, increase own Healing Effect by <color\=#2899FF>$2</color> for $3 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。觸發<link\="s\|194"><u>『絢爛煙火』</u></link>後，自身治療效果提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When <link\="s|194"><u>[Dazzling Fireworks]</u></link> is activated, increase Tomoko's Healing Effect by <color\=#2899FF>$2</color> for $3 turns."
+星光棒=Starlight Sticks
+【餘燼】=[Ember]
+餘燼=Ember
+r:"^敵人受到<link\="s\|194"><u>『絢爛煙火』</u></link>後，造成傷害降低<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="When <link\="s|194"><u>[Dazzling Fireworks]</u></link> is inflicted on a foe, decrease target's damage by <color\=#2899FF>$1</color> for $2 turn."
+焰火棒=Sparklers
+【焰舞】=[Flame Dance]
+焰舞=Flame Dance
 
 血色編織=Crimson Weaver
-【汲血業物】=<size\=24>[Blood Drawing Sword]</size>
+【汲血業物】=[Blood Drawing Sword]
 汲血業物=Blood Drawing Sword
-r:"^攻擊力提高<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|197"><u>『撕裂』</u></link>造成傷害時穿透提升<color\=#2899FF>(\d+\.\d+%)</color>。對處於<link\="s\|196"><u>『流血』</u></link>狀態的敵人造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>$"="Increase ATK by <color\=#2899FF>$1</color>. Increase PEN by <color\=#2899FF>$2</color> when dealing <link\="s|197"><u>[Laceration]</u></link> damage. Increase DMG Dealt by <color\=#2899FF>$3</color> when dealing damage to enemies with <link\="s|196"><u>[Bleed]</u></link>."
+r:"^攻擊力提高<color\=#2899FF>(.*)</color>。<link\="s\|197"><u>『撕裂』</u></link>造成傷害時穿透提升<color\=#2899FF>(.*)</color>。對處於<link\="s\|196"><u>『流血』</u></link>狀態的敵人造成傷害提升<color\=#2899FF>(.*)</color>$"="Increase ATK by <color\=#2899FF>$1</color>. When dealing damage with <link\="s|197"><u>[Laceration]</u></link>, increase Pierce by <color\=#2899FF>$2</color>. When dealing damage to foes with <link\="s|196"><u>[Bleed]</u></link>, increase DMG Dealt by <color\=#2899FF>$3</color>."
 無盡灰燼=Endless Ashes
-【猩紅之吻】=<size\=24>[Scarlet Kiss]</size>
+【猩紅之吻】=[Scarlet Kiss]
 猩紅之吻=Scarlet Kiss
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。為敵人添加<link\="s\|196"><u>『流血』</u></link>時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，可疊加(\d+)層，本場戰鬥永久生效。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> permanently when inflicting <link\="s|196"><u>[Bleed]</u></link> to an enemy, up to $3 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。為敵人添加<link\="s\|196"><u>『流血』</u></link>時，攻擊力提升<color\=#2899FF>(.*)</color>，可疊加(.*)層，本場戰鬥永久生效。$"="Increase ATK by <color\=#2899FF>$1</color>. When inflicting <link\="s|196"><u>[Bleed]</u></link> to a foe, increase ATK by <color\=#2899FF>$2</color>. Stacks up to $3 times. This effect is permanent."
+雙杖刀=Dual Cane Sword
+r:"^切換至<link\="s\|199"><u>『行刑官』</u></link>狀態時，物理傷害提高<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="When transforming into <link\="s|199"><u>[Executioner]</u></link>, increase Phys DMG by <color\=#2899FF>$1</color> for $2 turn."
+雙頭刀=Double-Edged Sword
+【刃金】=[Blade Gold]
+刃金=Blade Gold
 
 HACK專業型=Professional HACK Model
-【萬能晶片】=<size\=24>[Almighty Chip]</size>
+【萬能晶片】=[Almighty Chip]
 萬能晶片=Almighty Chip
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。我方怪盜造成弱點傷害時，攻擊力提高<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。{{A}}使用技能為敵人添加負面效果後，使其受暴擊效果提高<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，可疊加(\d+)層。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> when allies deal Weak DMG for $3 turns. When you use a skill to inflict a debuff to enemies, increase their CRIT DMG Taken by <color\=#2899FF>$4</color> for $5 turns, up to $6 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。我方怪盜造成弱點傷害時，攻擊力提高<color\=#2899FF>(.*)</color>，持續(.*)回合。{{A}}使用技能為敵人添加負面效果後，使其受暴擊效果提高<color\=#2899FF>(.*)</color>，持續(.*)回合，可疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. When allies deal Weak damage, increase ATK by <color\=#2899FF>$2</color> for $3 turns. After {{A}} inflicts a debuff with a skill, increase their Crit DMG Taken by <color\=#2899FF>$4</color> for $5 turns. Stacks up to $6 times."
 C型號可擕式=Portable C Type Model
-【修復代碼】=<size\=24>[Repair Code]</size>
+【修復代碼】=[Repair Code]
 修復代碼=Repair Code
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。添加『擾亂病毒』後，使敵人受到傷害額外提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After inflicting [Disruption Virus], increase enemies' DMG Taken by <color\=#2899FF>$2</color> for $3 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。添加『擾亂病毒』後，使敵人受到傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After inflicting [Disruption Virus], increase foes' DMG Taken by <color\=#2899FF>$2</color> for $3 turns."
+IDS監視電腦=IDS Monitoring Computer
+【高性能】=[High Performance]
+高性能=High Performance
+r:"^友方造成弱點傷害時，{{A}}攻擊力提升<color\=#2899FF>(.*)</color>，上限(.*)層。$"="When allies deal Weak DMG, increase user's ATK by <color\=#2899FF>$1</color>. Stacks up to $2 times."
+筆記型電腦=Laptop
+【強效】=[Strong]
+強效=Strong
 
 神聖戰歌=Holy Hymn
-【精準磨礪】=<size\=24>[Precision Grinding]</size>
+【精準磨礪】=[Precision Grinding]
 精準磨礪=Precision Grinding
-r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時念動屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。每次獲得『改裝』時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase EHR by <color\=#2899FF>$1</color>. Increase Psy DMG by <color\=#2899FF>$2</color> when attacking enemies with <link\="s|114"><u>[Sight]</u></link>. Each time you gain a [Customization], increase your ATK by <color\=#2899FF>$3</color> for $4 turn."
+r:"^效果命中提升<color\=#2899FF>(.*)</color>。自身擁有<link\="s\|114"><u>『準星』</u></link>時念動屬性傷害提升<color\=#2899FF>(.*)</color>。每次獲得『改裝』時，攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>. When user has <link\="s|114"><u>[Sight]</u></link>, increase Psy DMG by <color\=#2899FF>$2</color>. Each time user gains [Customization], increase ATK by <color\=#2899FF>$3</color> for $4 turn."
 基加美修戰斧=Gilgamesh Axe
-【趁敵不備】=<size\=24>[Surprise Attack]</size>
+【趁敵不備】=[Surprise Attack]
 趁敵不備=Surprise Attack
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每有1名敵人處於異常狀態，攻擊力、效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>，最多提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. For each enemy with a debuff, increase ATK and EHR by <color\=#2899FF>$2</color>, up to <color\=#2899FF>$3</color>."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。每有1名敵人處於異常狀態，攻擊力、效果命中提升<color\=#2899FF>(.*)</color>，最多提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. For each foe with a debuff, increase ATK and Ailment ACC by <color\=#2899FF>$2</color>, up to <color\=#2899FF>$3</color>."
+半月斧=Bardiche
+【攻心】=[Mind Games]
+攻心=Mind Games
+r:"^對處於異常狀態下的敵人造成的念動屬性傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Psy DMG Dealt by <color\=#2899FF>$1</color> to foes inflicted with Status Ailment."
+戰斧=Axe
+【沉重】=[Heavy]
+沉重=Heavy
 
 天鵝夢鄉=Dreamland of Swan
-【四季輪替】=<size\=24>[Seasons Rotation]</size>
+【四季輪替】=[Seasons Rotation]
 四季輪替=Seasons Rotation
 四季交替=Seasons Rotation
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每次獲得<link\="s\|212"><u>『朝露結晶』</u></link>或<link\="s\|213"><u>『寒霜結晶』</u></link>時，暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，最多可疊加(\d+)層。每次展開『仲春結界』/『冬夜結界』時，疾風傷害/冰凍傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase CRIT Rate by <color\=#2899FF>$2</color> each time you gain <link\="s|212"><u>[Morning Dew Crystal]</u></link> or <link\="s|213"><u>[Frost Crystal]</u></link> for $3 turns, up to $4 stacks. Increase Wind DMG/ Ice DMG by <color\=#2899FF>$5</color> each time you open [Mid-Spring Domain]/[Winter Night Domain] for $6 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。每次獲得<link\="s\|212"><u>『朝露結晶』</u></link>或<link\="s\|213"><u>『寒霜結晶』</u></link>時，暴擊率提升<color\=#2899FF>(.*)</color>，持續(.*)回合，最多可疊加(.*)層。每次展開『仲春結界』/『冬夜結界』時，疾風傷害/冰凍傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When user gains <link\="s|212"><u>[Morning Dew Crystal]</u></link> or <link\="s|213"><u>[Frost Crystal]</u></link>, increase Crit Rate by <color\=#2899FF>$2</color> for $3 turns. Stacks up to $4 times. When user opens [Mid-Spring Domain]/[Winter Night Domain], Increase Wind DMG/Ice DMG by <color\=#2899FF>$5</color> for $6 turns."
 北風之女=Lady of Mistral
-【生生不息】=<size\=24>[Cycle of Life]</size>
+【生生不息】=[Cycle of Life]
 生生不息=Cycle of Life
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每次獲得<link\="s\|212"><u>『朝露結晶』</u></link>或<link\="s\|213"><u>『寒霜結晶』</u></link>時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，可疊加(\d+)層，本場戰鬥永久生效。$"="Increase ATK by <color\=#2899FF>$1</color>. Permanently increase ATK by <color\=#2899FF>$2</color> each time you gain <link\="s|212"><u>[Morning Dew Crystal]</u></link> or <link\="s|213"><u>[Frost Crystal]</u></link>, up to $3 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。每次獲得<link\="s\|212"><u>『朝露結晶』</u></link>或<link\="s\|213"><u>『寒霜結晶』</u></link>時，攻擊力提升<color\=#2899FF>(.*)</color>，可疊加(.*)層，本場戰鬥永久生效。$"="Increase ATK by <color\=#2899FF>$1</color>. When user gains <link\="s|212"><u>[Morning Dew Crystal]</u></link> or <link\="s|213"><u>[Frost Crystal]</u></link>, increase ATK by <color\=#2899FF>$2</color>. Stacks up to $3 times. This effect is permanent."
+羽翎軍刀=Feather-Winged Saber
+【輕盈旋律】=[Light Melody]
+輕盈旋律=Light Melody
+r:"^進入戰鬥時，根據預設形態獲得<color\=#2899FF>(.*)</color>疾風傷害提升或冰凍傷害提升，效果持續(.*)回合。$"="At the start of battle, increase Wind DMG or Ice DMG by <color\=#2899FF>$1</color> based on your starting Form for $2 turns."
+輕型軍刀=Lightweight Saber
+【靈巧步伐】=[Agile Step]
 
 金色晨曦=Golden Sunrise
-【朝陽】=<size\=24>[Morning Sun]</size>
+【朝陽】=[Morning Sun]
 朝陽=Morning Sun
-r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。自身獲得舞姿時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。友方怪盜釋放HIGHLIGHT後，獲得(\d+)層『甦醒』，使自身傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。『甦醒』達到(\d+)層時，額外使自身HIGHLIGHT傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. When you gain Posture, increase ATK by <color\=#2899FF>$2</color> for $3 turns, up to $4 stack. When allies use HIGHLIGHT, gain $5 stack of [Wake], increase own damage by <color\=#2899FF>$6</color> for $7 turns, up to $8 stacks. When you have $9 stacks of [Awaken], additionally increase HIGHLIGHT damage by <color\=#2899FF>$10</color>."
+r:"^暴擊效果提升<color\=#2899FF>(.*)</color>。自身獲得舞姿時，攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合，上限(.*)層。友方怪盜釋放HIGHLIGHT/{{A}}後，獲得(.*)層『甦醒』，使自身傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合，上限(.*)層。『甦醒』達到(.*)層時，額外使自身HIGHLIGHT傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Crit DMG by <color\=#2899FF>$1</color>. When user gains Posture, increase ATK by <color\=#2899FF>$2</color> for $3 turns. Stacks up to $4 time. After allies use a HIGHLIGHT/{{A}}, gain $5 [Wake] stack, increase user's DMG Bonus by <color\=#2899FF>$6</color> for $7 turns. Stacks up to $8 times. When user has $9 [Awaken] stacks, additionally increase HIGHLIGHT DMG by <color\=#2899FF>$10</color>."
 甦醒=Wake
 西奈神劍=Sword of Sinai
-【賜福】=<size\=24>[Blessing]</size>
+【賜福】=[Blessing]
 賜福=Blessing
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。自身舞姿大於等於(\d+)層時，傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase damage by <color\=#2899FF>$3</color> when you have $2 or more stacks of Posture."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。自身舞姿大於等於(.*)層時，傷害提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When user has $2 or more Posture stacks, increase DMG Bonus by <color\=#2899FF>$3</color>."
+銀輝劍=Silver Sword
+【微茫】=[Faint]
+微茫=Faint
+r:"^自身發動HIGHLIGHT後，祝福屬性傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="After using own HIGHLIGHT, increase Bless DMG by <color\=#2899FF>$1</color> for $2 turns."
+西洋劍=Rapier
+【決斷】=[Resolve]
+決斷=Resolve
 
 浮香·鶴舞凌冬=Winter Crane Dance
-【驚鴻飛雪】=<size\=24>[Graceful Snow]</size>
+【驚鴻飛雪】=[Graceful Snow]
 驚鴻飛雪=Graceful Snow
-r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。以同伴為目標釋放技能時，使除自己以外的所有同伴暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持續(\d+)回合。使用技能時，技能每消耗(\d+)點精力值使技能主目標造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. When using skills on allies, increase all other allies' CRIT DMG by <color\=#2899FF>$2</color> for $3 turns. When using skills, increase the main target's DMG Dealt by <color\=#2899FF>$5</color> for every $4 SP consumed for $6 turns."
+r:"^暴擊效果提升<color\=#2899FF>(.*)</color>。以同伴為目標釋放技能時，使除自己以外的所有同伴暴擊效果提升<color\=#2899FF>(.*)</color>，效果持續(.*)回合。使用技能時，技能每消耗(.*)點精力值使技能主目標造成傷害提升<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="Increase Crit DMG by <color\=#2899FF>$1</color>. When using a skill on allies, increase all other allies' Crit DMG by <color\=#2899FF>$2</color> for $3 turns. When using a skill, for every $4 SP spent, increase the main target's DMG Dealt by <color\=#2899FF>$5</color> for $6 turns."
 晴日驚雀=Sunny Starling
-【無慈悲】=<size\=24>[No Mercy]</size>
+【無慈悲】=[No Mercy]
 無慈悲=No Mercy
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。透過自身{{A}}技能回復精力值時，使自身暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，可疊加(\d+)層。$"="Increase ATK by <color\=#2899FF>$1</color>. When using Persona skills to restore SP, increase own CRIT DMG by <color\=#2899FF>$2</color> for $3 turns, up to $4 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。透過自身{{A}}技能回復精力值時，使自身暴擊效果提升<color\=#2899FF>(.*)</color>，持續(.*)回合，可疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. When using a {{A}} skill to restore SP, increase user's Crit DMG by <color\=#2899FF>$2</color> for $3 turns. Stacks up to $4 times."
+倚梅傘=Plum-Leaning Umbrella
+【千機】=[Thousand Schemes]
+千機=Thousand Schemes
+r:"^自身使用{{A}}技能後，立刻回復<color\=#2899FF>(.*)</color>點精力值。$"="After using a {{A}} skill, immediately restore <color\=#2899FF>$1</color> SP."
+竹骨傘=Bamboo Umbrella
+【傘舞】=[Umbrella Dance]
+傘舞=Umbrella Dance
 
 灼灼春暉=Shining Sun
-【赤刃金鸞】=<size\=24>[Red Golden Blade]</size>
+【赤刃金鸞】=[Red Golden Blade]
 赤刃金鸞=Red Golden Blade
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。處於<link\="s\|222"><u>『鐵花舞』</u></link>狀態下，暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。造成<link\="s\|225"><u>火焰屬性TECHNICAL</u></link>時傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Under <link\="s|222"><u>[Iron Flower Dance]</u></link>, increase CRIT Rate by <color\=#2899FF>$2</color>. Increase damage by <color\=#2899FF>$3</color> when dealing <link\="s|225"><u>Fire TECHNICAL</u></link>."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。處於<link\="s\|222"><u>『鐵花舞』</u></link>狀態下，暴擊率提升<color\=#2899FF>(.*)</color>。造成<link\="s\|225"><u>火焰屬性TECHNICAL</u></link>時傷害提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When <link\="s|222"><u>[Iron Flower Dance]</u></link> is active, increase Crit Rate by <color\=#2899FF>$2</color>. When activating a <link\="s|225"><u>Fire TECHNICAL</u></link>, increase DMG Dealt by <color\=#2899FF>$3</color>."
 瑞雪紅妝=Timely Snow
-【殘臘鳴】=<size\=24>[End of Year]</size>
+【殘臘鳴】=[End of Year]
 殘臘鳴=End of Year
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。釋放<link\="s\|223"><u>『鐵火流星』</u></link>時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> when using <link\="s|223"><u>[Fiery Shooting Star]</u></link>."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。釋放<link\="s\|223"><u>『鐵火流星』</u></link>時，攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When using <link\="s|223"><u>[Fiery Shooting Star]</u></link>, increase ATK by <color\=#2899FF>$2</color>."
+如意刀=Wish-Granting Saber
+【鑄火】=[Forge Fire]
+r:"^造成持續傷害時，傷害提升<color\=#2899FF>(.*)</color>。$"="When dealing Damage Over Time, increase DMG Dealt by <color\=#2899FF>$1</color>."
+苗刀=Miao Dao
+【斬金】=[Cut Through Gold]
+斬金=Cut Through Gold
 
 鎮炎璃叉=Freezing Fork
-【無畏燎原】=<size\=24>[Fearless Breath]</size>
+【無畏燎原】=[Fearless Breath]
 無畏燎原=Fearless Breath
-r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>；\n戰鬥中，自身獲得等同於自身效果命中<color\=#2899FF>(\d+\.\d+%)</color>的攻擊力加成；\n每次造成<link\="s\|229"><u>冰凍屬性TECHNICAL</u></link>時，額外使目標防禦降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase EHR by <color\=#2899FF>$1</color>;\nIn battle, increase ATK Bonus based on <color\=#2899FF>$2</color> EHR;\nEach time you deal <link\="s|229"><u>Ice TECHNICAL</u></link>, additionally decrease the target's DEF by <color\=#2899FF>$3</color> for $4 turns."
+r:"^效果命中提升<color\=#2899FF>(.*)</color>；\n戰鬥中，自身獲得等同於自身效果命中<color\=#2899FF>(.*)</color>的攻擊力加成；\n每次造成<link\="s\|229"><u>冰凍屬性TECHNICAL</u></link>時，額外使目標防禦降低<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>;\nIn battle, increase ATK Bonus based on <color\=#2899FF>$2</color> Ailment ACC;\nWhen user activates an <link\="s|229"><u>Ice TECHNICAL</u></link>, additionally decrease the target's DEF by <color\=#2899FF>$3</color> for $4 turns."
 水淵之刺=Thorn of the Deep
-【水漫流霞】=<size\=24>[Flooding Glow]</size>
+【水漫流霞】=[Flooding Glow]
 水漫流霞=Flooding Glow
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每有(\d+)層『熄炎之力』，效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase EHR by <color\=#2899FF>$3</color> for every $2 stack of [Extinguishing Power]."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。每有(.*)層『熄炎之力』，效果命中提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. For every $2 [Extinguishing Power] stack, increase Ailment ACC by <color\=#2899FF>$3</color>."
+火消叉=Extinguishing Fork
+【燃燒禁止】=[No Burning]
+燃燒禁止=No Burning
+r:"^每次造成<link\="s\|229"><u>冰凍屬性TECHNICAL</u></link>後，自身冰凍屬性傷害永久提升<color\=#2899FF>(.*)</color>，最多可疊加(.*)層。$"="After activating an <link\="s|229"><u>Ice TECHNICAL</u></link>, Permanently increase own Ice DMG by <color\=#2899FF>$1</color>, up to $2 stacks."
+角叉=Sasumata
+【纏持】=[Entanglement]
+纏持=Entanglement
 
 天熾神心=Seraph's Heart
-【神佑賜福】=<size\=24>[God's Blessing]</size>
+【神佑賜福】=[God's Blessing]
 神佑賜福=God's Blessing
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。自身獲得『清晰』或『混沌』狀態時，使友方全體同伴的攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。偵探同伴釋放{{B}}技能/HIGHLIGHT/追加技能時，{{A}}的暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。$"="Increase ATK by <color\=#2899FF>$1</color>. When gaining [Clarity] or [Chaos], increase all allies' ATK by <color\=#2899FF>$2</color> for $3 turns. Increase own CRIT DMG by <color\=#2899FF>$3</color> when Detective Partner use a {{B}} skill/ HIGHLIGHT/ Follow Up for $4 turns, up to $5 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。自身獲得『清晰』或『混沌』狀態時，使友方全體同伴的攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合。偵探同伴釋放{{B}}技能/HIGHLIGHT/{{C}}/追加效果時，{{A}}的暴擊效果提升<color\=#2899FF>(.*)</color>，持續(.*)回合，上限(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. When user gains [Clarity] or [Chaos], increase all allies' ATK by <color\=#2899FF>$2</color> for $3 turns. When Detective Partner use a {{B}} skill/HIGHLIGHT/{{C}}/Follow Up, increase user's Crit DMG by <color\=#2899FF>$4</color> for $5 turns. Stacks up to $6 times."
 青沼光劍=Quasar Saber
-【相位融合】=<size\=24>[Phase Fusion]</size>
+【相位融合】=[Phase Fusion]
 相位融合=Phase Fusion
-r:"^萬能屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。自身處於『真相』狀態時，攻擊力<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Almighty DMG by <color\=#2899FF>$1</color>. Under [Truth], increase ATK by <color\=#2899FF>$2</color>."
+r:"^萬能屬性傷害提升<color\=#2899FF>(.*)</color>。自身處於『真相』狀態時，攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase Almighty DMG by <color\=#2899FF>$1</color>. When [Truth] is active, increase ATK by <color\=#2899FF>$2</color>."
+祈光劍=Prayer Sword
+【光晶體】=[Optical Crystal]
+光晶體=Optical Crystal
+r:"^自身造成萬能屬性傷害時傷害提高<color\=#2899FF>(.*)</color>。$"="Increase DMG Dealt by <color\=#2899FF>$1</color> when dealing Almighty DMG."
+仿製光劍=Lumina Saber
+【共振】=[Resonance]
+共振=Resonance
+
+天籟輕吟=Heavenly Whisper
+【嫣緋】=[Divine Radiance]
+嫣緋=Divine Radiance
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n{{A}}每獲得(.*)層<link\="s\|235"><u>『聖歌』</u></link>，使所有同伴獲得(.*)層『澄音』：造成傷害提升<color\=#2899FF>(.*)</color>，可疊加(.*)層，本場戰鬥永久生效。『澄音』疊加至(.*)層時，暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>.\nWhen Manaka gains $2 <link\="s|235"><u>[Holy Song]</u></link> stack, all allies gain $3 [Pure Sound] stack: Increase DMG Dealt by <color\=#2899FF>$4</color>. Stacks up to $5 times. This effect is permanent. When [Pure Sound] reaches $6 stacks, increase Crit DMG by <color\=#2899FF>$7</color>."
+澄音=Pure Sound
+歌者綺夢=Singer's Dream
+【琉璃】=[Luminous Glaze]
+琉璃=Luminous Glaze
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。{{A}}使用技能後，使自身攻擊力提升<color\=#2899FF>(.*)</color>，可疊加(.*)層，本場戰鬥永久生效。$"="Increase ATK by <color\=#2899FF>$1</color>. After Manaka uses a skill, increase user's ATK by <color\=#2899FF>$2</color>. Stacks up to $3 times. This effect is permanent."
+心願之聲=Voice of Wishes
+【青空】=[Blue Sky]
+青空=Blue Sky
+r:"^戰鬥開始時，{{A}}獲得(.*)層<link\="s\|235"><u>『聖歌』</u></link>，有<color\=#2899FF>(.*)</color>的機率額外獲得(.*)層<link\="s\|235"><u>『聖歌』</u></link>。$"="At the start of battle, Manaka gains $1 <link\="s|235"><u>[Holy Song]</u></link> stacks, there is a <color\=#2899FF>$2</color> chance to additionally gain $3 <link\="s|235"><u>[Holy Song]</u></link> stacks."
+純淨之聲=Pure Voice
+【純白】=[Pure White]
+純白=Pure White
+
+神之劍=Deus Xiphos
+【逆轉之時】=[Hour of Reversal]
+逆轉之時=Hour of Reversal
+r:"^逆<color\=#000000>轉</color>之時$"="H<color\=#000000>o</color>ur of Reversal"
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身每累計獲得(.*)層『月相』或『特殊月相』，暴擊率提升<color\=#2899FF>(.*)</color>，持續(.*)回合。自身釋放{{A}}技能/{{B}}造成(.*)次及以上傷害時，傷害提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. \nIncrease Crit Rate by <color\=#2899FF>$3</color> when user gains $2 [Moon Phase] or [Special Moon Phase] for $4 turns. Increase DMG Dealt by <color\=#2899FF>$6</color> when user deals $5 or more hits of damage with {{A}} skills/{{B}}."
+名刀透徹=Translucent Blade
+【靜守之志】=[Silent Resolve]
+靜守之志=Silent Resolve
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身為友方同伴添加增益效果時，所有同伴傷害提升<color\=#2899FF>(.*)</color>，自身傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. \nWhen user buffs allies, increase all allies' DMG Dealt by <color\=#2899FF>$2</color> and additionally increase user's DMG Dealt by <color\=#2899FF>$3</color> for $4 turns."
+不動正宗·改=Fudo Masamune
+【虛無之刃】=[Blade of Nothing]
+虛無之刃=Blade of Nothing
+r:"^月相達到(.*)層時自身火焰屬性傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Fire DMG by <color\=#2899FF>$1</color> when reaching $1 [Moon Phase] stacks."
+SEES制式單手劍=SEES Sword
+【沉默之際】=[Moment of Silence]
+沉默之際=Moment of Silence
+
+薩倫伽=Sarnga
+【青嵐矢】=[Verdant Arrow]
+青嵐矢=Verdant Arrow
+r:"^青<color\=#000000>嵐</color>矢$"="V<color\=#000000>e</color>rdant Arrow"
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n友方同伴透過攻擊帶有『風蝕』的敵人恢復生命值時，治療量額外提升<color\=#2899FF>(.*)</color>。釋放『復甦之矢』時，每消耗(.*)層『風語』，使所有同伴造成傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合，可疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>.\nWhen allies restore HP by attacking foes with [Wind Erosion], additionally increase healing by <color\=#2899FF>$2</color>. When using [Arrow of Rejuvenation], for every stack of [Wind Whisper] spent, increase the party's DMG Dealt by <color\=#2899FF>$4</color> for $5 turns. Stacks up to $6 times."
+鬼神之弓=Kishin Bow
+【遊刃矢】=[Effortless Arrow]
+遊刃矢=Effortless Arrow
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n釋放『復甦之矢』時，治療效果提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>.\nWhen using [Arrow of Rejuvenation], increase Healing Effect by <color\=#2899FF>$2</color>."
+魔力之弓=Magic Bow
+【靈躍矢】=[Spiritual Arrow]
+靈躍矢=Spiritual Arrow
+r:"^持有『風蝕』的敵人，造成的傷害降低<color\=#2899FF>(.*)</color>。$"="Decreases DMG Dealt by <color\=#2899FF>$1</color> for foes with [Wind Erosion]."
+SEES制式長弓=SEES Longbow
+【清風矢】=[Wind Arrow]
+清風矢=Wind Arrow
+
+薩巴茲烏斯=Sabazios
+【必殺力】=[Lethality]
+必殺力=Lethality
+r:"^暴擊效果提升<color\=#2899FF>(.*)</color>。\n自身獲得『執念』時，暴擊率提升<color\=#2899FF>(.*)</color>，上限(.*)層，持續(.*)回合。自身{{A}}技能/{{B}}/追加效果造成暴擊時，傷害額外獲得提升<color\=#2899FF>(.*)</color>。$"="Increase Crit DMG by <color\=#2899FF>$1</color>.\nWhen user has [Obsession], increase Crit Rate by <color\=#2899FF>$2</color> for $4 turns. Stacks up to $3 times. When landing a CRITICAL with a {{A}} skill/{{B}}/Follow Up, additionally increase DMG Dealt by <color\=#2899FF>$5</color>."
+地獄棘拳套=Wicked Cestus
+【爆發力】=[Explosiveness]
+爆發力=Explosiveness
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身擁有(.*)層及以上『鬥志』時，攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>.\nWhen user has more than $2 or more [Fighting Spirit] stacks, increase ATK by <color\=#2899FF>$3</color>."
+怒之鐵拳=Fists of Fury
+【持久力】=[Endurance]
+持久力=Endurance
+r:"^釋放『無敵鋼拳』後，自身電擊屬性傷害提升<color\=#2899FF>(.*)</color>，持續(\d+)回合。$"="After using [Unstoppable Punch], increase Akihiko's Elec DMG by <color\=#2899FF>$1</color> for $2 turns."
+SEES制式指虎=SEES Knuckles
+【衝擊力】=[Impact]
+衝擊力=Impact
+
+咒言魔偶=Cursed Doll
+【獨佔之慾】=[Possessive Desire]
+獨佔之慾=Possessive Desire
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>。\n『貪戀』達到1/2/3層時，自身造成的傷害提升<color\=#2899FF>(.*)</color>/<color\=#2899FF>(.*)</color>/<color\=#2899FF>(.*)</color>； 釋放『噓！行刑時間到』時，暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increase Crit Rate by <color\=#2899FF>$1</color>.\nWhen [Obsessive Love] stacks reach 1/2/3, increase user's DMG Dealt by <color\=#2899FF>$2</color>/<color\=#2899FF>$3</color>/<color\=#2899FF>$4</color>; When using [Hush! It's Execution Time], increase Crit DMG by <color\=#2899FF>$5</color>."
+血誓情書=Bloody Love Letter
+【戀愛依存】=[Love Dependence]
+戀愛依存=Love Dependence
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n每次釋放HIGHLIGHT後，自身傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAfter using HIGHLIGHT, increase user's DMG Dealt by <color\=#2899FF>$2</color> for $3 turns."
+安眠鐮刃=Slumber Scythe
+【甜蜜幻想】=[Sweet Fantasy]
+甜蜜幻想=Sweet Fantasy
+r:"^自身對『怨念』層數達到(.*)層的敵人造成的詛咒屬性傷害提升<color\=#2899FF>(.*)</color>。$"="Increase user's Curse DMG Dealt to foes with $1 [Resentment] stacks by <color\=#2899FF>$2</color>."
+鐮刃=Scythe
+【顫慄的心】=[Trembling Heart]
+顫慄的心=Trembling Heart
+
+不凋之庭=Eternal Grove
+【清風拂夏】=[Summer Breeze]
+清風拂夏=Summer Breeze
+r:"^藥品效果提升<color\=#2899FF>(.*)</color>。以友方為目標使用藥品時，額外使主目標的暴擊效果提升<color\=#2899FF>(.*)</color>，持續(\d+)回合。以友方為目標使用{{A}}技能時，額外使主目標攻擊力提升<color\=#2899FF>(.*)</color>，持續(\d+)回合。$"="Increase Item Effect by <color\=#2899FF>$1</color>. When using an item on allies, increase main target's Crit DMG by <color\=#2899FF>$2</color> more for $3 turns. When using a Persona skill on allies, increase main target's ATK by <color\=#2899FF>$4</color> more for $5 turns."
+午後茶語=Tea-Time Talk
+【甜香盛宴】=[Sweet Feast]
+甜香盛宴=Sweet Feast
+r:"^最大生命值提升<color\=#2899FF>(.*)</color>；以友方為目標使用{{A}}技能時，自身暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>; When using a Persona skill on allies, increase user's Crit DMG by <color\=#2899FF>$2</color>."
+汽水籃=Soda Basket
+【氣泡飲】=[Sparkling Drink]
+氣泡飲=Sparkling Drink
+r:"^使用藥品後，自身獲得<color\=#2899FF>(.*)</color>的最大生命值提升效果，持續(\d+)回合。$"="After using an item, increase user's Max HP by <color\=#2899FF>$1</color> for $2 turns."
+花籃=Flower Basket
+【花語】=[Flower Language]
+花語=Flower Language
+
+遊夢人魚=Dreaming Mermaid
+【浮瀾入夢】=[Ripple Reverie]
+浮瀾入夢=Ripple Reverie
+r:"^暴擊效果提升<color\=#2899FF>(.*)</color>。追加效果的暴擊率提升<color\=#2899FF>(.*)</color>。釋放技能消耗精力值時，使自身傷害提升<color\=#2899FF>(.*)</color>，可疊加(.*)層，本場戰鬥永久生效。$"="Increase Crit DMG by <color\=#2899FF>$1</color>. Increase Follow Up Crit Rate by <color\=#2899FF>$2</color>. When spending SP with a skill, increase damage by <color\=#2899FF>$3</color>. Stacks up to $4 times. This effect is permanent."
+海月晴空=Clear Jellyfish Sky
+【掠光漫行】=[Sunlight Stroll]
+掠光漫行=Sunlight Stroll
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。處於<link\="s\|249"><u>『海之領域』</u></link>中，攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When <link\="s|249"><u>[Ocean's Domain]</u></link> is active, increase ATK by <color\=#2899FF>$2</color>."
+夏日衝浪板=Summer Surfboard
+【馭潮】=[Tide Rider]
+馭潮=Tide Rider
+r:"^<link\="s\|250"><u>『潮湧雲傾』</u></link>造成傷害提升<color\=#2899FF>(.*)</color>。$"="Increase <link\="s|250"><u>[Tidal Surge]</u></link> DMG Dealt by <color\=#2899FF>$1</color>."
+衝浪板=Surfboard
+【逐浪】=[Surfing]
+逐浪=Surfing
+
+鐵誓狼騎=Ironsworn Rider
+【鬼神解放】=[Demon Unleashed]
+鬼神解放=Demon Unleashed
+r:"^速度提升<color\=#2899FF>(.*)</color>。\n自身使用『奧義·閃光腿』後，暴擊率提升<color\=#2899FF>(.*)</color>，持續(.*)回合。\n自身擊倒敵人後，額外使目標受到暴擊效果提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase SPD by <color\=#2899FF>$1</color>. After user uses [Secret Art: Lightning Legs], increase Crit Rate by <color\=#2899FF>$2</color> for $3 turns.\nAfter user knocks down a foe, increase target's Crit DMG Taken by <color\=#2899FF>$4</color> for $5 turn."
+伏特赤心=Voltaic Heart
+【夜行不歸】=[Night Roamer]
+夜行不歸=Night Roamer
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身擊倒敵人時，每擊倒(.*)名敵人自身攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合，最多提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>.\nWhen user knocks down a foe, increase user's ATK by <color\=#2899FF>$3</color> for every knocked down foe, up to <color\=#2899FF>$5</color>. Lasts for $4 turn."
+作戰靴=Combat Boots
+【無盡疾走】=[Endless Rush]
+無盡疾走=Endless Rush
+r:"^自身擁有『超極限』時，速度提升<color\=#2899FF>(.*)</color>。$"="When user has [Super Limit], increase SPD by <color\=#2899FF>$1</color>."
+防爆靴=Boots
+【咆哮】=[Roar]
+咆哮=Roar
 
 ----------
 STANDARD 5 STAR UNIT WEAPONS
 ----------
-復仇者的尖齒=Avenger's Fang
-【叛逆之子】=<size\=24>[Rebellious Teen]</size>
+復仇者的尖齒=Revenge Axe
+【叛逆之子】=[Rebellious Teen]
 叛逆之子=Rebellious Teen
-r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。每個單位的回合結束時，{{A}}獲得『蠻力』1層，最多獲得10層，造成傷害時，消耗所有的『蠻力』，使技能傷害提升（<color\=#2899FF>(\d+\.\d+%)</color>\*『蠻力』層數）。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. Gain 1 stacks of [Brute Force] after a character act, up to 10 stacks. When dealing damage, consume all [Brute Force] and increase damage by (<color\=#2899FF>$2</color>*[Brute Force] stack)."
-蓋亞鎮壓者=Gaia Suppressor
-【爆裂先鋒】=<size\=24>[Burst Vanguard]</size>
+r:"^暴擊效果提升<color\=#2899FF>(.*)</color>。每個單位的回合結束時，{{A}}獲得『蠻力』(.*)層，最多獲得(.*)層，造成傷害時，消耗所有的『蠻力』，使技能傷害提升（<color\=#2899FF>(.*)</color>\*『蠻力』層數）。$"="Increase Crit DMG by <color\=#2899FF>$1</color>. After foes and allies act, gain $2 [Fired Up] stack. Stacks up to $3 times. When dealing damage, spend all [Fired Up] stacks to increase Skill DMG by <color\=#2899FF>$4</color> per [Fired Up] stacks."
+蓋亞鎮壓者=Grand Presser
+【爆裂先鋒】=[Burst Vanguard]
 爆裂先鋒=Burst Vanguard
-r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。釋放技能造成暴擊時，若自身持有<link\="s\|130"><u>『觸底反彈』</u></link>效果，則使該技能的暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase CRIT by <color\=#2899FF>$1</color>. When you land a CRIT with a skill, if you have <link\="s|130"><u>[Rebound]</u></link>, increase that skill's CRIT DMG by <color\=#2899FF>$2</color>."
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>。釋放技能造成暴擊時，若自身持有<link\="s\|130"><u>『觸底反彈』</u></link>效果，則使該技能的暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increase Crit Rate by <color\=#2899FF>$1</color>. When <link\="s|130"><u>[Rebound]</u></link> is active and dealing a CRITICAL with a skill, increase Crit DMG by <color\=#2899FF>$2</color>."
+重型釘錘=Heavy Mace
+【尖刺】=[Spikes]
+尖刺=Spikes
+普通棍棒=Normal Rod
+【強力】=[Strong]
+強力=Strong
 
-黃金戰利品=Golden Spoils
-【狂暴醫者】=<size\=24>[Healer's Frenzy]</size>
+黃金戰利品=Golden Legacy
+【狂暴醫者】=[Healer's Frenzy]
 狂暴醫者=Healer's Frenzy
-r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。對敵人釋放技能造成暴擊時，額外對敵人造成<color\=#2899FF>(\d+\.\d+%)</color>最大生命值的傷害，最多造成<color\=#2899FF>(\d+\.\d+%)</color>攻擊力的傷害；使用治療類技能時，使主目標同伴恢復最大生命值的<color\=#2899FF>(\d+\.\d+%)</color>。使用技能攻擊未命中時，立刻獲得<link\="s\|150"><u>『直覺』</u></link>。$"="Increase CRIT by <color\=#2899FF>$1</color>. When you land a CRIT against an enemy, deal <color\=#2899FF>$2</color> Max HP as damage, up to a maximum of <color\=#2899FF>$3</color> ATK; When using a Healing skill, the main target restore <color\=#2899FF>$4</color> Max HP. When you miss with a skill, gain <link\="s|150"><u>[Instinct]</u></link>."
-新月刀=Crescent Knife
-【月夜醫者】=<size\=24>[Luna Healer]</size>
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>。對敵人釋放技能造成暴擊時，額外對敵人造成<color\=#2899FF>(.*)</color>最大生命值的傷害，最多造成<color\=#2899FF>(.*)</color>攻擊力的傷害；使用治療類技能時，使主目標同伴恢復最大生命值的<color\=#2899FF>(.*)</color>。使用技能攻擊未命中時，立刻獲得<link\="s\|150"><u>『直覺』</u></link>。$"="Increase Crit Rate by <color\=#2899FF>$1</color>. If a foe is critically hit with a skill, deal <color\=#2899FF>$2</color> of Max HP as bonus damage (up to <color\=#2899FF>$3</color> of ATK). When using a healing skill, restore <color\=#2899FF>$4</color> of the target's Max HP. If a skill misses, immediately gain <link\="s|150"><u>[Chivalry]</u></link>."
+新月刀=Shamshir
+【月夜醫者】=[Luna Healer]
 月夜醫者=Luna Healer
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。{{A}}治療後，受治療夥伴生命值不低於(\d+%)， 則獲得『滿月』效果：生命值增加<color\=#2899FF>(\d+\.\d+%)</color>，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，2回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After healing, if the target is not less than $2 HP, they gain [Full Moon]: Increase HP by <color\=#2899FF>$3</color> and ATK by <color\=#2899FF>$4</color> for 2 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。{{A}}治療後，受治療夥伴生命值不低於(.*)， 則獲得『滿月』效果：生命值增加<color\=#2899FF>(.*)</color>，攻擊力提升<color\=#2899FF>(.*)</color>，(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When healing an ally with $2 or more HP, grant [Moonlight]. [Moonlight]: Increase HP by <color\=#2899FF>$3</color> and ATK by <color\=#2899FF>$4</color> for $5 turns."
 獵頭勺=Headhunter Ladle
-【咚！】=<size\=24>[Bonk!]</size>
+【咚！】=[Bonk!]
 咚！=Bonk!
-r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。使用{{B}}技能攻擊敵人時，為生命值最低的夥伴回復生命值\（恢復值相當於{{A}}攻擊力的<color\=#2899FF>(\d+\.\d+%)</color>\），並且有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率使目標陷入遺忘狀態，(\d+)回合。$"="Increase CRIT Rate by <color\=#2899FF>$1</color>. When using {{B}} skill to attack enemies, restore <color\=#2899FF>$2</color> ATK as HP to the lowest HP ally, with a <color\=#2899FF>$3</color> fixed chance to inflict the enemy with Forget for $4 turn."
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>。使用{{B}}技能攻擊敵人時，為生命值最低的夥伴回復生命值\（恢復值相當於{{A}}攻擊力的<color\=#2899FF>(.*)</color>\），並且有<color\=#2899FF>(.*)</color>的固定機率使目標陷入遺忘狀態，(.*)回合。$"="Increase Crit Rate by <color\=#2899FF>$1</color>. When attacking with a skill, restore HP equal to <color\=#2899FF>$2</color> of A to the ally with the lowest HP. Also, <color\=#2899FF>$3</color> fixed chance to inflict Forget on the target foe for $4 turn."
+音速刀=Sonic Blade
+【修身】=[Self-Cultivation]
+修身=Self-Cultivation
+r:"^使用治療技能後，暴擊率提升<color\=#2899FF>(.*)</color>，(.*)回合。$"="After using a healing skill, increase Crit Rate by <color\=#2899FF>$1</color> for $2 turn."
+彎刃大刀=Falchion
+【護命】=[Life Protection]
+護命=Life Protection
 
-玫瑰之棘=Rose Thorn
-【噬身愛火】=<size\=24>[Devouring Passion]</size>
+玫瑰之棘=Rosethorn
+【噬身愛火】=[Devouring Passion]
 噬身愛火=Devouring Passion
-r:"^火焰傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。進入<link\="s\|113"><u>『潛心』</u></link>狀態後，隨機使1名敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，並根據此時處於<link\="s\|102"><u>燃燒</u></link>狀態下的敵人數量，提升（人數\*<color\=#2899FF>(\d+\.\d+%)</color>）的火焰屬性傷害，最高<color\=#2899FF>(\d+%)</color>。$"="Increase Fire DMG by <color\=#2899FF>$1</color>. After entering <link\="s|113"><u>[Concentration]</u></link>, inflict <link\="s|102"><u>Burn</u></link> to 1 random enemy and based on the number of enemies with <link\="s|102"><u>Burn</u></link>, increase Fire DMG by (number of enemies with Burn*<color\=#2899FF>$2</color>), up to <color\=#2899FF>$3</color>."
-幻象鞭=Phantom Whip
-【焰火之舞】=<size\=24>[Fire Dance]</size>
+r:"^火焰傷害提升<color\=#2899FF>(.*)</color>。進入<link\="s\|113"><u>『潛心』</u></link>狀態後，隨機使1名敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，並根據此時處於<link\="s\|102"><u>燃燒</u></link>狀態下的敵人數量，提升（人數\*<color\=#2899FF>(.*)</color>）的火焰屬性傷害，最高<color\=#2899FF>(.*)</color>。$"="Increase Fire DMG by <color\=#2899FF>$1</color>. When <link\="s|113"><u>[La Vie En Rose]</u></link> is active, inflict Burn on 1 random foe. Increase Fire DMG <color\=#2899FF>$2</color> for each Burning foe. Maximum of <color\=#2899FF>$3</color>."
+幻象鞭=Masquerade Ribbon
+【焰火之舞】=[Fire Dance]
 焰火之舞=Fire Dance
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。攻擊處於<link\="s\|102"><u>燃燒</u></link>狀態下的敵人時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> when attacking enemies inflicted with <link\="s|102"><u>Burn</u></link>."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。攻擊處於<link\="s\|102"><u>燃燒</u></link>狀態下的敵人時，攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When attacking a Burning foe, increase ATK by <color\=#2899FF>$2</color>."
+分銅鎖=Fundo-Kusari
+【熾心】=[Blazing Heart]
+熾心=Blazing Heart
+r:"^造成<link\="s\|102"><u>燃燒</u></link>效果時，效果命中提升<color\=#2899FF>(.*)</color>。$"="When inflicting <link\="s|102"><u>Burn</u></link>, increase Ailment ACC by <color\=#2899FF>$1</color>."
+熾紅鞭=Heat Whip
+【柔韌】=[Flexible]
+柔韌=Flexible
 
-八荒一念=Singular Thought
-【輪迴之觸】=<size\=24>[Touch of Reincarnation]</size>
+八荒一念=Infinite Moment
+【輪迴之觸】=[Touch of Reincarnation]
 輪迴之觸=Touch of Reincarnation
-r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。釋放技能攻擊敵人時，使技能主目標獲得『忘川水』：自身每有10點速度，則使其受到的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持續1回合，並使自身速度提升15，持續2回合。帶有<link\="s\|127"><u>『孟婆湯』</u></link>釋放技能時，該效果擴散至全體敵人。$"="Increase SPD by <color\=#2899FF>$1</color>. When using a skill to attack an enemy, the main target gain [Water of Oblivion]: For every 10 SPD you have, increase DMG Taken by <color\=#2899FF>$2</color> for 1 turn, then increase your SPD by 15 for 2 turns. When you have <link\="s|127"><u>[Meng Po Soup]</u></link>, the effect is spread to all enemies."
-四時萬物=All under Four Seasons
-【臨戰之意】=<size\=24>[Will Before Battle]</size>
+r:"^速度提升<color\=#2899FF>(.*)</color>。釋放技能攻擊敵人時，使技能主目標獲得『忘川水』：自身每有(.*)點速度，則使其受到的傷害提升<color\=#2899FF>(.*)</color>，效果持續(.*)回合，並使自身速度提升(.*)，持續(.*)回合。帶有<link\="s\|127"><u>『孟婆湯』</u></link>釋放技能時，該效果擴散至全體敵人。$"="Increase Speed by <color\=#2899FF>$1</color>. After attacking a foe with a skill, inflict [Waters of Oblivion] on the main target. [Waters of Oblivion]: Increase foe's DMG Taken by <color\=#2899FF>$3</color> for every $2 of Yaoling's Speed for $4 turn. Increase Yaoling's Speed by $5 for $6 turns. After spending <link\="s|127"><u>[Meng Po Soup]</u></link> to use a skill on a foe, inflict this effect on all foes."
+忘川水=Waters of Oblivion
+四時萬物=Sunstaff
+【臨戰之意】=[Will Before Battle]
 臨戰之意=Will Before Battle
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。造成減益效果後，使自身速度提升<color\=#2899FF>(\d+)</color>點，效果持續2回合，可疊加2層。戰鬥開始時，直接獲得2層。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase SPD by <color\=#2899FF>$2</color> for 2 turns after inflicting debuffs, up to 2 stacks. At the start of battle, immediately gain 2 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。造成減益效果後，使自身速度提升<color\=#2899FF>(.*)</color>點，效果持續(.*)回合，可疊加(.*)層。戰鬥開始時，直接獲得(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. After inflicting a debuff, increase Speed by <color\=#2899FF>$2</color> for $3 turns. Stacks up to $4 times. Gain $5 stacks at the start of battle."
+雙生棍=Duality Staff
+【失憶】=[Amnesia]
+失憶=Amnesia
+r:"^使處於<link\="s\|108"><u>遺忘</u></link>狀態下的敵人受到的傷害提升<color\=#2899FF>(.*)</color>。$"="Increase foes' DMG Taken when they are inflicted with <link\="s|108"><u>Forget</u></link> by <color\=#2899FF>$1</color>."
+長棍=Staff
+【堅硬】=[Hard]
+堅硬=Hard
 
-甜蜜禮物=Sweet Gift
-【糖果探測】=<size\=24>[Candy Detection]</size>
+甜蜜禮物=Sweet Pickaxe
+【糖果探測】=[Candy Detection]
 糖果探測=Candy Detection
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。消耗<link\="s\|164"><u>『童趣』</u></link>時，使{{A}}獲得對應層數的『奇思妙想』：『奇思妙想』存在時，自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。同伴釋放技能造成傷害時，消耗1層『奇思妙想』並使得該技能造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。『奇思妙想』持續2回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When consuming <link\="s|164"><u>[Childlike Fun]</u></link>, gain an equal amout of [Whimsical Thoughts]: When [Whimsical Thoughts] is present, increase ATK by <color\=#2899FF>$2</color>. When an ally deals damage with a skill, consume 1 stack of [Whimsical Thoughts] to increase that skill's DMG Dealt by <color\=#2899FF>$3</color>. [Whimsical Thoughts] last for 2 turns."
-毛茸啾=Fluffy Chirp
-【啾不可擋】=<size\=24>[Unstoppable]</size>
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。消耗<link\="s\|164"><u>『童趣』</u></link>時，使{{A}}獲得對應層數的『奇思妙想』：『奇思妙想』存在時，自身攻擊力提升<color\=#2899FF>(.*)</color>。同伴釋放技能造成傷害時，消耗1層『奇思妙想』並使得該技能造成的傷害提升<color\=#2899FF>(.*)</color>。『奇思妙想』持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After spending <link\="s|164"><u>[Childish Heart]</u></link>, gain [Whimsy] based on number of stacks spent: When Haruna has [Whimsy], increase ATK by <color\=#2899FF>$2</color>. When allies deal damage with skills, spend 1 Whimsy, and increase the DMG by <color\=#2899FF>$3</color>. [Whimsy] lasts for $4 turns."
+奇思妙想=Whimsy
+r:"^奇<color\=#000000>思</color>妙想$"="W<color\=#000000>h</color>imsy"
+毛茸啾=Chirpy Pickaxe
+【啾不可擋】=[Unstoppable]
 啾不可擋=Unstoppable
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。以同伴為目標釋放技能後，根據目標身上的攻擊力提升效果的個數提升其攻擊力，每層<color\=#2899FF>(\d+\.\d+%)</color>，上限3層，效果持續2回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When using a skill on allies, increase their ATK by <color\=#2899FF>$2</color> for 2 turns based on how many ATK buffing effects they have, up to 3 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。以同伴為目標釋放技能後，根據目標身上的攻擊力提升效果的個數提升其攻擊力，每層<color\=#2899FF>(.*)</color>，上限(.*)層，效果持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After using a skill on an ally, for each ATK buff on the ally, increase ATK by <color\=#2899FF>$2</color> for $4 turns. Stacks up to $3 times."
+尖嘴鎬=Pointy Pickaxe
+【破拆】=[Demolition]
+破拆=Demolition
+r:"^每有1個同伴處於屬性增益狀態，則自身攻擊力提升<color\=#2899FF>(.*)</color>。$"="For every ally with a buff, increase user's ATK by <color\=#2899FF>$1</color>."
+登山鎬=Mountaineering Pickaxe
+【尖銳】=[Pointed]
+尖銳=Pointed
 
-天使之心=Angel's Heart
-【治癒誓言】=<size\=24>[Healing Oath]</size>
-治癒誓言=Healing Oath
-r:"^最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>；\n<link\="s\|169"><u>甘露</u></link>額外使自身治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>；\n消耗<link\="s\|169"><u>甘露</u></link>時，使所有友方怪盜傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，持續1回合。$"="Increase Max HP by <color\=#2899FF>$1</color>; \n<link\="s|169"><u>Nectar</u></link> increase your Healing Effect by <color\=#2899FF>$2</color>; \nWhen consuming <link\="s|169"><u>Nectar</u></link>, increase all allies' DMG Dealt by <color\=#2899FF>$3</color> for 1 turn."
-生命頌歌=Ode to Life
-【全面護理】=<size\=24>[Comprehensive Nursing]
-全面護理=Comprehensive Nursing
-r:"^治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>；\n持續治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>；\n主動治療時有<color\=#2899FF>(\d+\.\d+%)</color>機率使技能主目標獲得<link\="s\|111"><u>祝福</u></link>效果。$"="Increase Healing Effect by <color\=#2899FF>$1</color>; \nIncrease Regeneration Effect by <color\=#2899FF>$2</color>;\nWhen using a skill to heal there is a <color\=#2899FF>$3</color> chance for the main target to gain <link\="s|111"><u>Bless</u></link>."
+天使之心=Angel Heart
+【治癒誓言】=[Hippocratic Oath]
+治癒誓言=Hippocratic Oath
+r:"^最大生命值提升<color\=#2899FF>(.*)</color>；\n<link\="s\|169"><u>甘露</u></link>額外使自身治療效果提升<color\=#2899FF>(.*)</color>；\n消耗<link\="s\|169"><u>甘露</u></link>時，使所有友方怪盜傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Max HP by <color\=#2899FF>$1</color>; \nWhen Minami has <link\="s|169"><u>Diagnosis</u></link>, increase Healing Effect by <color\=#2899FF>$2</color>; \nWhen spending <link\="s|169"><u>Diagnosis</u></link>, increase party's damage by <color\=#2899FF>$3</color> for $4 turn."
+生命頌歌=Hymn of Life
+【全面護理】=[Total Coverage]
+全面護理=Total Coverage
+r:"^治療效果提升<color\=#2899FF>(.*)</color>；\n持續治療效果提升<color\=#2899FF>(.*)</color>；\n主動治療時有<color\=#2899FF>(.*)</color>機率使技能主目標獲得<link\="s\|111"><u>祝福</u></link>效果。$"="Increase Healing Effect by <color\=#2899FF>$1</color>; \nIncrease Continuous Healing Effect by <color\=#2899FF>$2</color>; \nAfter using a healing skill, <color\=#2899FF>$3</color> chance to grant <link\="s|111"><u>Blessing</u></link> to the main target."
+便攜醫療站=Portable Trauma Unit
+【吊點滴】=[Intravenous Assist]
+吊點滴=Intravenous Assist
+r:"^以友方為目標釋放技能時，使主目標每回合開始時回復<color\=#2899FF>(.*)</color>的最大生命值，持續(.*)回合。$"="After using a skill on an ally, restore <color\=#2899FF>$1</color> of Max HP at the start of the turn for $2 turn."
+醫療箱=Medkit
+【體能管理】=[Wellness Manager]
+體能管理=Wellness Manager
 
 月下翎=Moonlit Feather
-【酣歌醉舞】=<size\=24>[Drunken Revelry]</size>
-酣歌醉舞=Druken Revelry
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。{{A}}每消耗1杯『<link\="s\|182"><u>精調·DELUXE</u></link>/<link\="s\|183"><u>精調</u></link>/<link\="s\|184"><u>粗調</u></link>』會觸發120%/100%/50%強度的下述效果：使所有同伴隨機獲得攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>/造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>/暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>的其中1種，效果持續2回合（優先獲得未觸發的效果，同種效果不可疊加）。{{A}}每調製出2杯<link\="s\|180"><u>『雞尾酒』</u></link>時，有<color\=#2899FF>(\d+%)</color>機率使解明怪盜的準備時間減少1次行動。$"="Increase ATK by <color\=#2899FF>$1</color>. For every 1 cup of <link\="s|182"><u>[Premium Deluxe]</u></link>/ <link\="s|183"><u>[Deluxe]</u></link>/ <link\="s|184"><u>[Rough Mix]</u></link> consumed, trigger the following effect at 120%/100%/50%: All allies randomly increase ATK by <color\=#2899FF>$2</color>/ increase DMG Dealt by <color\=#2899FF>$3</color>/ increase CRIT Rate by <color\=#2899FF>$4</color> for 2 turns (prioritizing different buff, the same buff cannot be stacked). For every 2 <link\="s|180"><u>[Cocktail]</u></link> mixed, there is a <color\=#2899FF>$5</color> to reduce the cooldown of the Navigator."
-星夜卜者=Starry Night Soothsayer
-【魅惑之吻】=<size\=24>[Bewitching Kiss]</size>
-魅惑之吻=Bewitching Kiss
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。釋放技能時，使技能目標造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>；若該技能消耗了<link\="s\|180"><u>『雞尾酒』</u></link>，使技能主目標造成傷害額外提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持續2回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When using a skill, increase the target's DMG Dealt by <color\=#2899FF>$2</color>; If that skill consumed <link\="s|180"><u>[Cocktail]</u></link>, additionally increase the main target's DMG Dealt by <color\=#2899FF>$3</color> for 2 turns."
+【酣歌醉舞】=[Moonlit Banquet]
+酣歌醉舞=Moonlit Banquet
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。{{A}}每消耗1杯『<link\="s\|182"><u>精調·DELUXE</u></link>/<link\="s\|183"><u>精調</u></link>/<link\="s\|184"><u>粗調</u></link>』會觸發120%/100%/50%強度的下述效果：使所有同伴隨機獲得攻擊力提升<color\=#2899FF>(.*)</color>/造成傷害提升<color\=#2899FF>(.*)</color>/暴擊率提升<color\=#2899FF>(.*)</color>的其中1種，效果持續2回合（優先獲得未觸發的效果，同種效果不可疊加）。{{A}}每調製出2杯<link\="s\|180"><u>『雞尾酒』</u></link>時，有<color\=#2899FF>(.*)</color>機率使解明怪盜的準備時間減少1次行動。$"="Increase ATK by <color\=#2899FF>$1</color>. For each <link\="s|180"><u>[Cocktail]</u></link> spent, randomly grant 1 of the following effects to the party:\nIncrease ATK by <color\=#2899FF>$2</color> (2 turns);\nIncrease damage by <color\=#2899FF>$3</color> (2 turns);\nIncrease Crit Rate by <color\=#2899FF>$4</color> (2 turns);\nThese effects do not stack. If the Cocktail spent was <link\="s|182"><u>[Tailor-Made]</u></link>, multiply effect by 120%. If it was <link\="s|183"><u>[Standard]</u></link>, multiply effect by 100%. If it was <link\="s|184"><u>[Basic]</u></link>, multiply effect by 50%. For every 2 <link\="s|180"><u>[Cocktail]</u></link> mixed, <color\=#2899FF>$5</color> chance to reduce Yumi's cooldown time by 1 turn."
+星夜卜者=Starrynight Soothsayer
+【魅惑之吻】=[Seductive Kiss]
+魅惑之吻=Seductive Kiss
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。釋放技能時，使技能目標造成傷害提升<color\=#2899FF>(.*)</color>；若該技能消耗了<link\="s\|180"><u>『雞尾酒』</u></link>，使技能主目標造成傷害額外提升<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When using a skill, increase main target's damage by <color\=#2899FF>$2</color> for $4 turns. If this skill spends <link\="s|180"><u>[Cocktail]</u></link>, increase damage by an additional <color\=#2899FF>$3</color>."
+雀頭舞杖=Peafowl Cane
+【微醺】=[Slightly Tipsy]
+微醺=Slightly Tipsy
+r:"^戰鬥開始時，{{A}}有<color\=#2899FF>(.*)</color>機率獲得1杯<link\="s\|182"><u>『精調·DELUXE』</u></link>，<color\=#2899FF>(.*)</color>機率獲得1杯<link\="s\|183"><u>『精調』</u></link>。$"="At the start of battle, <color\=#2899FF>$1</color> chance to gain 1 <link\="s|182"><u>[Tailor-Made]</u></link> cocktail, and <color\=#2899FF>$2</color> chance to gain 1 <link\="s|183"><u>[Standard]</u></link> cocktail."
+舞杖=Dancing Cane
+【鼓舞】=[Encouragement]
+鼓舞=Encouragement
 
 神聖誓約=Sacred Oath
-【榮耀勳章】=<size\=24>[Medal of Honour]</size>
+【榮耀勳章】=[Medal of Honour]
 榮耀勳章=Medal of Honour
-r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。『正直聖印』的護盾量提升<color\=#2899FF>(\d+\.\d+%)</color>；每層『正直聖印』額外為同伴提供<color\=#2899FF>(\d+\.\d+%)</color>的傷害提升，最多計入(\d+)層。$"="Increase DEF by <color\=#2899FF>$1</color>. Increase the Shield from [Upright Mark] by <color\=#2899FF>$2</color>; Each stack of [Upright Mark] additionally increase all allies' DMG Bonus <color\=#2899FF>$3</color>, up to $4 stacks."
+r:"^防禦力提升<color\=#2899FF>(.*)</color>。『正直聖印』的護盾量提升<color\=#2899FF>(.*)</color>；每層『正直聖印』額外為同伴提供<color\=#2899FF>(.*)</color>的傷害提升，最多計入(.*)層。$"="Increase DEF by <color\=#2899FF>$1</color>. Increase the shield from [Upright Mark] by <color\=#2899FF>$2</color>; Each stack of [Upright Mark] additionally increase all allies' DMG Bonus by <color\=#2899FF>$3</color>. Stacks up to $4 times."
 不滅榮光=Undying Glory
-【劍與試煉】=<size\=24>[Sword and Trials]</size>
+【劍與試煉】=[Sword and Trials]
 劍與試煉=Sword and Trials
-r:"^護盾效果提升<color\=#2899FF>(\d+\.\d+%)</color>；對生命值低於(\d+%)的友方單位，{{A}}的護盾效果額外提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Shield Effect by <color\=#2899FF>$1</color>; Additionally increase Shield Effect to allies below $2 HP by <color\=#2899FF>$3</color>."
+r:"^護盾效果提升<color\=#2899FF>(.*)</color>；對生命值低於(.*)的友方單位，{{A}}的護盾效果額外提升<color\=#2899FF>(.*)</color>。$"="Increase Shield Effect by <color\=#2899FF>$1</color>; Additionally increase Shield Effect to allies below $2 HP by <color\=#2899FF>$3</color>."
+冰棘劍=Icethorn Sword
+【星之旅途】=[Star Journey]
+星之旅途=Star Journey
+r:"^進入戰鬥時，自身護盾效果提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="At the start of battle, increase own Shield Effect by <color\=#2899FF>$1</color> for $2 turns."
+荊棘劍=Thorn Sword
+【荊棘之路】=[Thorny Path]
+荊棘之路=Thorny Path
 
 家宅惡犬=Bad Doggy
-【尖牙利爪】=<size\=24>[Sharp Fangs and Claws]</size>
+【尖牙利爪】=[Sharp Fangs and Claws]
 尖牙利爪=Sharp Fangs and Claws
-r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。友方怪盜使用火屬性技能或追擊技能時，自身效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。使用『GOGO{{A}}！』觸發『熱烈歡迎』時，額外使技能目標的防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合；觸發『窮追猛打』時，額外使技能目標的防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。（防禦力降低效果不可疊加）$"="Increase EHR by <color\=#2899FF>$1</color>. When other allies use Fire skills or Follow Up skills, increase own EHR by <color\=#2899FF>$2</color> for $3 turn, up to $4 stack. When using [GO GO WOOF WOOF RU!] to trigger [Warm Welcome], additionally decrease the DEF of the skill target by <color\=#2899FF>$5</color> for $6 turns; When using [GO GO WOOF WOOF RU!] to trigger [Furious Pursue], additionally decrease the DEF of the skill target by <color\=#2899FF>$7</color> for $6 turns. (Cannot stack the DEF Down effects)"
+r:"^效果命中提升<color\=#2899FF>(.*)</color>。友方怪盜使用火屬性技能或追擊技能時，自身效果命中提升<color\=#2899FF>(.*)</color>，持續(.*)回合，上限(.*)層。使用『GOGO{{A}}！』觸發『熱烈歡迎』時，額外使技能目標的防禦力降低<color\=#2899FF>(.*)</color>，持續(.*)回合；觸發『窮追猛打』時，額外使技能目標的防禦力降低<color\=#2899FF>(.*)</color>，持續(.*)回合。（防禦力降低效果不可疊加）$"="Increase Ailment ACC by <color\=#2899FF>$1</color>. When other allies use Fire skills or Follow Up, increase user's Ailment ACC by <color\=#2899FF>$2</color> for $3 turn. Stacks up to $4 time. When using [GO GO WOOF WOOF RU!] to trigger [Warm Welcome], additionally decrease the target's DEF by <color\=#2899FF>$5</color> for $6 turns; When using [GO GO WOOF WOOF RU!] to trigger [Furious Pursue], additionally decrease the target's DEF by <color\=#2899FF>$7</color> for $6 turns. (Cannot stack the DEF Down effects)"
 咆哮獵手=Roaring Hunter
-【精準捕獵】=<size\=24>[Precision Hunting]</size>
+【精準捕獵】=[Precision Hunting]
 精準捕獵=Precision Hunting
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。擁有『熱烈歡迎』或『窮追猛打』狀態時，自身效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase own EHR by <color\=#2899FF>$2</color> when you have [Warm Welcome] or [Furious Pursue]."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。擁有『熱烈歡迎』或『窮追猛打』狀態時，自身效果命中提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When user has [Warm Welcome] or [Furious Pursue], increase Ailment ACC by <color\=#2899FF>$2</color>."
+突襲爪套=Assault Claws
+r:"^每有一個敵人擁有{{A}}技能的負面效果，{{A}}的火焰屬性傷害增加<color\=#2899FF>(.*)</color>，上限<color\=#2899FF>(.*)</color>。$"="For every foe with a debuff from {{A}}, increase own Fire DMG by <color\=#2899FF>$1</color>, up to <color\=#2899FF>$2</color>."
+毛絨爪套=Fur Claws
+【兇猛】=[Ferocious]
+兇猛=Ferocious
+
+勝利宣言=Declaration of Victory
+【重力加速】=[Gravitational Acceleration]
+重力加速=Gravitational Acceleration
+r:"^速度提升<color\=#2899FF>(.*)</color>；\n自身速度超過(.*)的部分，每(.*)點速度提升自身\n<color\=#2899FF>(.*)</color>的攻擊力，最多提升<color\=#2899FF>(.*)</color>；\n釋放{{A}}技能後，自身每累積提升(.*)km/h的『時速』,使所有同伴傷害提升<color\=#2899FF>(.*)</color>，最多提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Speed by <color\=#2899FF>$1</color>；\nFor every $3 Speed that's over $2, increase user's ATK by <color\=#2899FF>$4</color>, up to <color\=#2899FF>$5</color>;\nAfter using a {{A}} skill, for every $6km/h accumulated [Speed], increase all allies' DMG Bonus by <color\=#2899FF>$7</color>, up to <color\=#2899FF>$8</color> for $9 turns."
+開路先鋒=Leading Trailblazer
+【尾流效應】=[Wake Effect]
+尾流效應=Wake Effect
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。開啟『急速光輪』後，自身傷害提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. After activating [Rapid Wheel], increase user's DMG Bonus by <color\=#2899FF>$2</color>."
+競速旗幟=Racing Flag
+【渦輪增壓】=[Turbocharger]
+渦輪增壓=Turbocharger
+r:"^進入戰鬥時，場上每有1個支配或反抗職業的隊員，傷害提升<color\=#2899FF>(.*)</color>，最多提升<color\=#2899FF>(.*)</color>。$"="At the start of battle, for every Assassin/Sweeper character, increase DMG Dealt by <color\=#2899FF>$1</color>, up to <color\=#2899FF>$2</color>."
+黑白旗幟=Black and White Flag
+【動能回收】=[KERS]
+動能回收=KERS
 
 ----------
 4 STAR UNIT WEAPONS
 ----------
-破碎{{A}}者MR=Crushing Destroyer MR
-【英雄光環】=<size\=24>[Hero's Aura]</size>
+破碎{{A}}者MR=Final Buster
+【英雄光環】=[Hero's Aura]
 英雄光環=Hero's Aura
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。以同伴為目標釋放{{B}}技能後，使其隨機獲得以下2種效果中的1種：提升<color\=#2899FF>(\d+\.\d+%)</color>攻擊力；提升<color\=#2899FF>(\d+\.\d+%)</color>暴擊效果，效果持續1回合。若該同伴持有的<link\="s\|128"><u>『啟動』</u></link>層數大於等於2，則同時獲得2種效果，並使{{A}}的護盾效果提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持續1回合。$"="Increase ATK <color\=#2899FF>$1</color>. When using a skill on an ally, they randomly gain 1 of the 2 following effect: Increase ATK by <color\=#2899FF>$2</color> for 1 turn; Increase CRIT DMG by <color\=#2899FF>$3</color> for 1 turn. If they have 2 or more stacks of <link\="s|128"><u>[Activate]</u></link>, they gain both effct and increase your Shield Effect by <color\=#2899FF>$3</color> for 1 turn."
-最強戰戟X=Strongest Halberd X
-【夥伴意志】=<size\=24>[Companion's Will]</size>
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。以同伴為目標釋放{{B}}技能後，使其隨機獲得以下2種效果中的1種：提升<color\=#2899FF>(.*)</color>攻擊力；提升<color\=#2899FF>(.*)</color>暴擊效果，效果持續1回合。若該同伴持有的<link\="s\|128"><u>『啟動』</u></link>層數大於等於2，則同時獲得2種效果，並使{{A}}的護盾效果提升<color\=#2899FF>(.*)</color>，效果持續1回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After using a skill on an ally, grant target 1 of the following buffs: Increase ATK by <color\=#2899FF>$2</color> (1 turn); Increase Crit DMG by <color\=#2899FF>$3</color> (1 turn). If target has 2 or more <link\="s|128"><u>[Power of Friendship]</u></link> stacks, grant both buffs, and increase Kamiyama's Shield Effect by <color\=#2899FF>$3</color> for 1 turn."
+最強戰戟X=Justice Lance
+【夥伴意志】=[Companion's Will]
 夥伴意志=Companion's Will
-r:"^護盾效果提升<color\=#2899FF>(\d+\.\d+%)</color>。以同伴為目標釋放{{A}}技能時，使其攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，目標每損失(\d+%)生命值，則效果額外提升(\d+%)，效果持續1回合。$"="Increase Shield Effect by <color\=#2899FF>$1</color>. When using a Persona skill on allies, increase their ATK by <color\=#2899FF>$2</color> for 1 turn, for every $3 missing HP on the target, additionally increase this effect by $4."
+r:"^護盾效果提升<color\=#2899FF>(.*)</color>。以同伴為目標釋放{{A}}技能時，使其攻擊力提升<color\=#2899FF>(.*)</color>，目標每損失(.*)生命值，則效果額外提升(.*)，效果持續1回合。$"="Increase Shield Effect by <color\=#2899FF>$1</color>. After using a skill on an ally, increase ATK by <color\=#2899FF>$2</color> for 1 turn. For every $3 HP the target loses, increase ATK by $4."
+EX審判長槍=Judgement Spear EX
+【援護】=[Cover]
+援護=Cover
+r:"^場上存在處於護盾下的同伴時，自身攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase user's ATK by <color\=#2899FF>$1</color> when there is an ally with shield."
+EX躍動長槍=Pulsing Spear EX
+【無畏】=[Fearless]
+無畏=Fearless
 
-復古迪斯可:P=Retro Disco :P
-【潮流焦點】=<size\=24>[Focus of Trend]</size>
+復古迪斯可:P=Retro Disco Style
+【潮流焦點】=[Focus of Trend]
 潮流焦點=Focus of Trend
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。{{A}}使用<link\="s\|142"><u>『勁歌熱舞』</u></link>後，有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率返還1個<link\="s\|141"><u>『節拍』</u></link>;<link\="s\|142"><u>『勁歌熱舞』</u></link>提供的屬性提升效果額外提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When you use <link\="s|142"><u>[Hot Dance]</u></link>, there is a <color\=#2899FF>$2</color> fixed chance to refund 1 <link\="s|141"><u>[Beat]</u></link>; Increase the buffs provided by <link\="s|142"><u>[Hot Dance]</u></link> by an extra <color\=#2899FF>$3</color>."
-熒色魅惑D4u=Fluorescent Charm D4u
-【和弦彩鈴】=<size\=24>[Chord Ringtone]</size>
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。{{A}}使用<link\="s\|142"><u>『勁歌熱舞』</u></link>後，有<color\=#2899FF>(.*)</color>的固定機率返還1個<link\="s\|141"><u>『節拍』</u></link>;<link\="s\|142"><u>『勁歌熱舞』</u></link>提供的屬性提升效果額外提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. After granting user's <link\="s|142"><u>[Pulsating Rhythm]</u></link>, <color\=#2899FF>$2</color> chance to gain 1 <link\="s|141"><u>[Beat]</u></link> stack. Increase buffs from <link\="s|142"><u>[Pulsating Rhythm]</u></link> by <color\=#2899FF>$3</color> more."
+熒色魅惑D4u=Emerald Charmer
+【和弦彩鈴】=[Chord Ringtone]
 和弦彩鈴=Chord Ringtone
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使用支援技能後，{{A}}有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率額外獲得1個<link\="s\|141"><u>『節拍』</u></link>。$"="Increase ATK by <color\=#2899FF>$1</color>. After using support skills, there is a <color\=#2899FF>$2</color> fixed chance to gain 1 additional <link\="s|141"><u>[Beat]</u></link>."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。使用支援技能後，{{A}}有<color\=#2899FF>(.*)</color>的固定機率額外獲得1個<link\="s\|141"><u>『節拍』</u></link>。$"="Increase ATK by <color\=#2899FF>$1</color>. After using a support skill, <color\=#2899FF>$2</color> chance to gain 1 <link\="s|141"><u>[Beat]</u></link> stack."
+甜心辣妹SG型=Sweet Girl SG Type
+【萬人迷】=[Charmer]
+萬人迷=Charmer
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>，使用(.*)次支援技能後該效果消失。$"="Increase ATK by <color\=#2899FF>$1</color>, dispels this effect after using support skill $2 times."
+翻蓋手機=Flip Phone
+【熱點】=[Hot Spot]
+熱點=Hot Spot
 
-織夢者=Dreamweaver
-【幻夢交響】=<size\=24>[Symphony of Dream]</size>
+織夢者=Dream and Nightmare
+【幻夢交響】=[Symphony of Dream]
 幻夢交響=Symphony of Dream
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。造成<link\="s\|109"><u>睡眠</u></link>效果的效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。以同伴為目標釋放技能時，使其攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持續2回合。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase EHR by <color\=#2899FF>36.0%</color> when inflicting <link\="s|109"><u>Sleep</u></link>. When using a skill on an ally, increase their ATK by <color\=#2899FF>$2</color> for 2 turns."
-影舞雙冠=Dual Shadow Dance
-【夢魘纏繞】=<size\=24>[Entangled Nightmare]</size>
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。造成<link\="s\|109"><u>睡眠</u></link>效果的效果命中提升<color\=#2899FF>(.*)</color>。以同伴為目標釋放技能時，使其攻擊力提升<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase chance to inflict <link\="s|109"><u>Sleep</u></link> by <color\=#2899FF>$2</color>. When using a skill on an ally, increase target's ATK by <color\=#2899FF>$3</color> for $4 turns."
+影舞雙冠=Shadow Crowns
+【夢魘纏繞】=[Entangled Nightmare]
 夢魘纏繞=Entangled Nightmare
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。消耗<link\="s\|131"><u>『青葉』</u></link>時，使自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase own ATK by <color\=#2899FF>$2</color> when consuming <link\="s|131"><u>[Green Leaf]</u></link> for $3 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。消耗<link\="s\|131"><u>『青葉』</u></link>時，使自身攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by 12.0|12.0|16.0|16.0|20.0|20.0|24.0%. After spending <link\="s|131"><u>[Greenleaf]</u></link>, increase ATK by <color\=#2899FF>$2</color> for $3 turns."
+詠頌雙刃=Ode of Twin Blades
+【安眠】=[Peaceful Sleep]
+安眠=Peaceful Sleep
+r:"^場上每有1個敵人，則自身攻擊力提升<color\=#2899FF>(.*)</color>，上限(.*)層。$"="For every foe, increase user's ATK by <color\=#2899FF>$1</color>, up to $2 stacks."
+雙短劍=Twin Blades
+【精準】=[Precise]
+精準=Precise
 
-光之洗禮=Baptism of Light
-【聖靈碎片】=<size\=24>[Shard of Holy Spirit]</size>
+光之洗禮=Baptism by Fire
+【聖靈碎片】=[Shard of Holy Spirit]
 聖靈碎片=Shard of Holy Spirit
-r:"^生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。對敵人施加<link\="s\|102"><u>燃燒</u></link>狀態時，額外使敵人受到的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>；每層<link\="s\|135"><u>『獻祭者』</u></link>額外使{{A}}造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. When inflicting <link\="s|102"><u>Burn</u></link> to an enemy, increase their DMG Taken by <color\=#2899FF>$2</color>; Each stack of <link\="s|135"><u>[Martyr]</u></link> increase your damage by <color\=#2899FF>$3</color>."
-搖曳流火=Rocking Fire
-【滌罪業火】=<size\=24>[Fire of Deliverance]</size>
+r:"^生命值提升<color\=#2899FF>(.*)</color>。對敵人施加<link\="s\|102"><u>燃燒</u></link>狀態時，額外使敵人受到的傷害提升<color\=#2899FF>(.*)</color>；每層<link\="s\|135"><u>『獻祭者』</u></link>額外使{{A}}造成傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. When inflicting <link\="s|102"><u>Burn</u></link> on a foe, increase target's DNG Taken by <color\=#2899FF>$2</color>; For each <link\="s|135"><u>[Chosen One]</u></link> stack, increase Kurotani's DMG by <color\=#2899FF>$3</color>."
+搖曳流火=Death Stinger
+【滌罪業火】=[Fire of Deliverance]
 滌罪業火=Fire of Deliverance
-r:"^生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|136"><u>『聖火』</u></link>造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. Increase <link\="s|136"><u>[Sacred Flame]</u></link> DMG Dealt by <color\=#2899FF>$2</color>."
+r:"^生命值提升<color\=#2899FF>(.*)</color>。<link\="s\|136"><u>『聖火』</u></link>造成的傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. Increase <link\="s|136"><u>[Sacred Flame]</u></link> DMG by <color\=#2899FF>$2</color>."
+石欄聖釘=Holy Stone Nail
+【焚心】=[Burning Heart]
+焚心=Burning Heart
+r:"^造成<link\="s\|102"><u>燃燒</u></link>效果時，效果命中提高<color\=#2899FF>(.*)</color>。$"="When inflicting <link\="s|102"><u>Burn</u></link>, increase Ailment ACC by <color\=#2899FF>$1</color>."
+聖釘=Holy Nail
+【洗禮】=[Baptism]
+洗禮=Baptism
 
-歸淨樂土=Elysium
-【救贖鎖鏈】=<size\=24>[Chains of Salvation]</size>
+歸淨樂土=Karmic Cycle
+【救贖鎖鏈】=[Chains of Salvation]
 救贖鎖鏈=Chains of Salvation
-r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n使用『絕對審判』技能時額外計入1層<link\="s\|116"><u>『充能』</u></link>並根據自身防禦力偷取目標<color\=#2899FF>(\d+\.\d+%)</color>的防禦力（最多<color\=#2899FF>(\d+)</color>防禦力），效果持續2回合。$"="Increase DEF by <color\=#2899FF>$1</color>. \nCount 1 additional stack of <link\="s|116"><u>[Vitalise]</u></link> when using [Absolute Judgment] and steal <color\=#2899FF>$2</color> DEF based on your DEF (Up to <color\=#2899FF>$3</color> DEF) from the target for 2 turns."
-萬寶重擊=Virtuous Strike
-【罪業剋星】=<size\=24>[Profane Nemesis]</size>
+r:"^防禦力提升<color\=#2899FF>(.*)</color>。\n使用『絕對審判』技能時額外計入(.*)層<link\="s\|116"><u>『充能』</u></link>並根據自身防禦力偷取目標<color\=#2899FF>(.*)</color>的防禦力（最多<color\=#2899FF>(.*)</color>防禦力），效果持續(.*)回合。$"="Increase DEF by <color\=#2899FF>$1</color>. \nWhen spending <link\="s|116"><u>[Gavel]</u></link> stacks with [Absolute Judgment], add 1 to number of stacks spent. Also steal <color\=#2899FF>$3</color> of target's DEF for $5 turns based on own DEF (up to <color\=#2899FF>$4</color>)."
+萬寶重擊=Heavy Metal Pain
+【罪業剋星】=[Profane Nemesis]
 罪業剋星=Profane Nemesis
-r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。為生命值低於(\d+%)的同伴提供護盾時，護盾加成提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase DEF by <color\=#2899FF>$1</color>. Increase Shield Bonus by <color\=#2899FF>$3</color> when granting an ally with less than $2 HP Shield."
+r:"^防禦力提升<color\=#2899FF>(.*)</color>。為生命值低於(.*)的同伴提供護盾時，護盾加成提升<color\=#2899FF>(.*)</color>。$"="Increase DEF by <color\=#2899FF>$1</color>. When granting a shield to an ally with less than $2 HP, increase shield by <color\=#2899FF>$3</color>."
+尖刺鏈錘=Spiked Chain Hammer
+【祈禱】=[Prayer]
+祈禱=Prayer
+r:"^對弱點為祝福屬性的敵人，造成的祝福屬性傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Bless DMG Dealt by <color\=#2899FF>$1</color> to foes weak to Bless."
+鏈錘=Chain Hammer
 
-啟明之星=Guiding Star
-【風暴來臨】=<size\=24>[Coming Storm]</size>
+啟明之星=Venus Sunrise
+【風暴來臨】=[Coming Storm]
 風暴來臨=Coming Storm
-r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。戰鬥開始時，使自身獲得1層<link\="s\|118"><u>『激勵』</u></link>，暴擊效果提升(\d+%)。每次獲得<link\="s\|118"><u>『激勵』</u></link>時，造成的傷害額外提升（當前<link\="s\|118"><u>『激勵』</u></link>效果層數\*<color\=#2899FF>(\d+\.\d+%)</color>），效果持續1回合。$"="Increase CRIT Rate by <color\=#2899FF>$1</color>. At the start of battle, gain 1 stack of <link\="s|118"><u>[Resolve]</u></link> and increase CRIT DMG by $2. Each time you gain <link\="s|118"><u>[Resolve]</u></link>, increase DMG Dealt by (<link\="s|118"><u>[Resolve]</u></link>*<color\=#2899FF>$3</color>) for 1 turn."
-授勳之證=Proof of Honor
-【騎士精神】=<size\=24>[Chivalry]</size>
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>。戰鬥開始時，使自身獲得(.*)層<link\="s\|118"><u>『激勵』</u></link>，暴擊效果提升(.*)。每次獲得<link\="s\|118"><u>『激勵』</u></link>時，造成的傷害額外提升（當前<link\="s\|118"><u>『激勵』</u></link>效果層數\*<color\=#2899FF>(.*)</color>），效果持續(.*)回合。$"="Increase Crit Rate by <color\=#2899FF>$1</color>. At the start of battle, gain $2 <link\="s|118"><u>[Right to Strike]</u></link> stack, and increase Crit DMG by $3. For each stack of <link\="s|118"><u>[Right to Strike]</u></link>, increase DMG by (current number of stacks × <color\=#2899FF>$4</color>). Lasts for $5 turn."
+授勳之證=Knight's Reward
+【騎士精神】=[Chivalry]
 騎士精神=Chivalry
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。對同一敵人連續造成傷害時，每段攻擊有(\d+%)固定機率使自身對其傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，最高<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When dealing consecutive hits of damage to the same enemy, each attack has a $2 fixed chance to increase your DMG Dealt by <color\=#2899FF>$3</color>, up to <color\=#2899FF>$4</color>."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。對同一敵人連續造成傷害時，每段攻擊有(.*)固定機率使自身對其傷害提升<color\=#2899FF>(.*)</color>，最高<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When dealing damage to the same foe multiple times, each hit has a $2 chance to deal <color\=#2899FF>$3</color> more damage (up to <color\=#2899FF>$4</color>)."
+古典迅捷劍=Classical Rapier
+【輕靈】=[Light]
+輕靈=Light
+r:"^使用技能時，消耗減少<color\=#2899FF>(.*)</color>。$"="When using a skill, decrease SP cost by <color\=#2899FF>$1</color>."
+刺劍=Rapier
+【誓言】=[Oath]
+誓言=Oath
 
-亡語聖裁=Deathrattle Judge
-【輪迴符文】=<size\=24>[Reincarnation Rune]</size>
+亡語聖裁=Babel's Verdict
+【輪迴符文】=[Reincarnation Rune]
 輪迴符文=Reincarnation Rune
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|154"><u>『命運的十四行詩』</u></link>造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>；獲得<link\="s\|153"><u>『詩句』</u></link>時有<color\=#2899FF>(\d+\.\d+%)</color>固定機率直接獲得<link\="s|163"><u>『卓越詩句』</u></link>，<link\="s|163"><u>『卓越詩句』</u></link>觸發所有<link\="s|153"><u>『詩句』</u></link>的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase DMG Dealt by <link\="s|154"><u>[Sonnet of Fate]</u></link> by <color\=#2899FF>$2</color>; There is a <color\=#2899FF>$3</color> fixed chance to gain <link\="s|163"><u>[Brilliant Verse]</u></link> when gaining <link\="s|153"><u>[Verse]</u></link>, <link\="s|163"><u>[Brilliant Verse]</u></link> trigger all effects from <link\="s|153"><u>[Verse]</u></link>."
-<color\=#66ccff>『卓越詩句』</color>=<color\=#66ccff>[Brilliant Verse]</color>
-卓越詩句=Brilliant Verse
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。<link\="s\|154"><u>『命運的十四行詩』</u></link>造成的傷害提升<color\=#2899FF>(.*)</color>；獲得<link\="s\|153"><u>『詩句』</u></link>時有<color\=#2899FF>(.*)</color>固定機率直接獲得<link\="s|163"><u>『卓越詩句』</u></link>，<link\="s|163"><u>『卓越詩句』</u></link>觸發所有<link\="s|153"><u>『詩句』</u></link>的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase DMG of <link\="s|154"><u>[Sonnet of Fate]</u></link> by <color\=#2899FF>$2</color>. After gaining a <link\="s|153"><u>[Verse]</u></link>, <color\=#2899FF>$3</color> chance to gain <link\="s|163"><u>[Verse of Zenith]</u></link>. <link\="s|163"><u>[Verse of Zenith]</u></link> has all the effects of [Verse of Hate], [Verse of Healing], and [Verse of Passion]."
+<color\=#66ccff>『卓越詩句』</color>=<color\=#66ccff>[Verse of Zenith]</color>
+卓越詩句=Verse of Zenith
 特殊『詩句』，同時獲得所有『詩句』的效果。=Special [Verse], has the effects of all [Verse].
 猩紅儀杖=Scarlet Scepter
-【鮮血之觸】=<size\=24>[Touch of Blood]</size>
+【鮮血之觸】=[Touch of Blood]
 鮮血之觸=Touch of Blood
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。獲得特殊<link\="s\|153"><u>『詩句』</u></link>時，根據當前的特殊<link\="s\|153"><u>『詩句』</u></link>的數量提升造成的傷害<color\=#2899FF>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When gaining special <link\="s|153"><u>[Verse]</u></link>, increase DMG Dealt by <color\=#2899FF>$2</color> based on the current special <link\="s|153"><u>[Verse]</u></link> amount for $3 turn."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。獲得特殊<link\="s\|153"><u>『詩句』</u></link>時，根據當前的特殊<link\="s\|153"><u>『詩句』</u></link>的數量提升造成的傷害<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When gaining [Verse of Hate], [Verse of Healing], or [Verse of Passion], increase DMG by <color\=#2899FF>$2</color> based on the number of current Verses for $3 turn."
+貴族杖劍=Noble Cane Sword
+【悲愴】=[Sorrow]
+悲愴=Sorrow
+r:"^對<link\="s\|112"><u>詛咒</u></link>狀態下的敵人造成傷害提升<color\=#2899FF>(.*)</color>。$"="Increase DMG Dealt by <color\=#2899FF>$1</color> to foes inflicted with <link\="s|112"><u>Cursed</u></link>."
+杖劍=Cane Sword
+【優雅】=[Elegant]
+優雅=Elegant
 
-凜冬女王=Winter Queen
-【永恆冬夜】=<size\=24>[Eternal Winter Night]</size>
+凜冬女王=Queen of Winter
+【永恆冬夜】=[Eternal Winter Night]
 永恆冬夜=Eternal Winter Night
-r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。自身的<link\="s\|119"><u>『冰晶』</u></link>達到8顆時，就可以釋放<link\="s\|137"><u>『刀尖上的舞者』</u></link>；<link\="s\|137"><u>『刀尖上的舞者』</u></link>造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。同時，當自身持有8顆<link\="s|119"><u>『冰晶』</u></link>時，<link\="s|138"><u>『寒冰之刃』</u></link>技能即可獲得強化。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. You can use <link\="s|137"><u>[Dancer on Knife's Edge]</u></link> when you have 8 stacks of <link\="s|119"><u>[Ice Crystal]</u></link>; Increase DMG Dealt by <link\="s|137"><u>[Dancer on Knife's Edge]</u></link> by <color\=#2899FF>$2</color>. Strengthen <link\="s|138"><u>[Frozen Blade]</u></link> when you have 8 stacks of <link\="s|119"><u>[Ice Crystal]</u></link>."
-鳴空長歌=Sky Song
-【冰之饋贈】=<size\=24>[Ice Gift]</size>
+r:"^暴擊效果提升<color\=#2899FF>(.*)</color>。自身的<link\="s\|119"><u>『冰晶』</u></link>達到(.*)顆時，就可以釋放<link\="s\|137"><u>『刀尖上的舞者』</u></link>；<link\="s\|137"><u>『刀尖上的舞者』</u></link>造成的傷害提升<color\=#2899FF>(.*)</color>。同時，當自身持有(.*)顆<link\="s|119"><u>『冰晶』</u></link>時，<link\="s|138"><u>『寒冰之刃』</u></link>技能即可獲得強化。$"="Increase Crit DMG by <color\=#2899FF>$1</color>. Activate <link\="s|137"><u>[Blade Dancer]</u></link> at $2+ Ice Crystal stacks and increase its DMG by <color\=#2899FF>$3</color>. Increase the power of <link\="s|138"><u>[Durandal of Ice]</u></link> at $4+ Ice Crystal stacks."
+鳴空長歌=Edelweiss
+【冰之饋贈】=[Ice Gift]
 冰之饋贈=Ice Gift
-sr:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。琴音每次獲得<link\="s\|119"><u>『(.*)』</u></link>時增加冰凍傷害<color\=#2899FF>(\d+\.\d+%)</color>，持續1回合，最多疊加10層。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase Ice DMG by <color\=#2899FF>$3</color> every time you gain <link\="s|119"><u>[$2]</u></link> for 1 turn up to 10 stacks."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。{{A}}每次獲得<link\="s\|119"><u>『冰晶』</u></link>時增加冰凍傷害<color\=#2899FF>(.*)</color>，持續(.*)回合，最多疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. Each time Kotone gains <link\="s|119"><u>[Ice Crystal]</u></link> stacks, increase Ice DMG by <color\=#2899FF>$2</color> for $3 turn. Stacks up to $4 times."
+皇家軍刀=Royal Saber
+【極寒】=[Extreme Cold]
+極寒=Extreme Cold
+r:"^戰鬥開始時，有<color\=#2899FF>(.*)</color>機率獲得(.*)顆<link\="s\|119"><u>『冰晶』</u></link>。$"="At the start of battle, there is a <color\=#2899FF>$1</color> chance to gain $2 <link\="s|119"><u>[Ice Crystal]</u></link>."
+騎兵刀=Cavalry Sword
+【會心】=[Understanding]
+會心=Understanding
 
-幻夢泡影=Dream Bubble
-【深海共鳴】=<size\=24>[Deep Sea Resonance]</size>
+幻夢泡影=Ephemerality
+【深海共鳴】=[Deep Sea Resonance]
 深海共鳴=Deep Sea Resonance
-r:"^防禦力提高<color\=#2899FF>(\d+\.\d+%)</color>。{{A}}釋放技能時，使技能主目標額外獲得1層<link\="s\|144"><u>『海之守護』</u></link>；並根據技能目標的<link\="s\|144"><u>『海之守護』</u></link>層數，每層使攻擊力提高<color\=#2899FF>(\d+\.\d+%)</color>，防禦力提高<color\=#2899FF>(\d+\.\d+%)</color>，效果持續2回合。$"="Increase DEF by <color\=#2899FF>$1</color>. When using a skill, the main target gain 1 additional stack of <link\="s|144"><u>[Nereids' Guard]</u></link>; For each stack of <link\="s|144"><u>[Nereids' Guard]</u></link> the target have, increase their ATK by <color\=#2899FF>$2</color> and DEF by <color\=#2899FF>$3</color> for 2 turns."
-海域聲呐=Sea Sonar
-【回聲屏障】=<size\=24>[Echo Barrier]</size>
+r:"^防禦力提高<color\=#2899FF>(.*)</color>。{{A}}釋放技能時，使技能主目標額外獲得(.*)層<link\="s\|144"><u>『海之守護』</u></link>；並根據技能目標的<link\="s\|144"><u>『海之守護』</u></link>層數，每層使攻擊力提高<color\=#2899FF>(.*)</color>，防禦力提高<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="Increase DEF by <color\=#2899FF>$1</color>. After using a skill, grant 1 <link\="s|144"><u>[Seashell]</u></link> stack to the main target. For every stack of <link\="s|144"><u>[Seashell]</u></link> granted, increase ATK by <color\=#2899FF>$3</color> and DEF by <color\=#2899FF>$4</color> for $5 turns."
+海域聲呐=Submarine Sonar
+【回聲屏障】=[Echo Barrier]
 回聲屏障=Echo Barrier
-r:"^護盾效果提升<color\=#2899FF>(\d+\.\d+%)</color>。處於護盾保護下的怪盜，防禦力提高<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Shield Effect by <color\=#2899FF>$1</color>. Increase the DEF for allies with Shield by <color\=#2899FF>$2</color>."
+r:"^護盾效果提升<color\=#2899FF>(.*)</color>。處於護盾保護下的怪盜，防禦力提高<color\=#2899FF>(.*)</color>。$"="Increase Shield Effect by <color\=#2899FF>$1</color>. Increase DEF of shielded allies by <color\=#2899FF>$2</color>."
+C.A偵查型=C.A Detection Type
+【聲呐】=[Sonar]
+聲呐=Sonar
+r:"^戰鬥開始時，使所有同伴受到的傷害降低<color\=#2899FF>(.*)</color>，效果持續(.*)回合。$"="At the start of battle, decrease all allies' DMG Taken by <color\=#2899FF>$1</color> for $2 turns."
+水下助推器=Sea Scooter
+【音波】=[Sound Wave]
+音波=Sound Wave
 
-超頻脈衝=Overclocking Pulse
-【湮滅震盪】=<size\=24>[Annihilating Concussion]</size>
-湮滅震盪=<size\=25>Annihilating Concussion</size>
-r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。敵人被添加元素異常狀態時，防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，上限1層，持續2回合。自身每兩回合開始時，有<color\=#2899FF>(\d+\.\d+%)</color>基礎機率使某位隨機敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Increase EHR by <color\=#2899FF>$1</color>. After inflicting an Elemental Ailment to an enemy, decrease their DEF by <color\=#2899FF>$2</color> up to 1 stack for 2 turns. At the start of every two turns, there is a <color\=#2899FF>$3</color> chance to inflict a random enemy with an Elemental Ailment that they don't have."
-航域引力=Airspace Gravity
-【量子輻射】=<size\=24>[Quantum Radiation]</size>
-量子輻射=Quantum Radiation
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使場上處於元素異常狀態的敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>。若其身上有<link\="s\|179"><u>『輻射』</u></link>，則防禦力額外降低<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Decrease the DEF for enemies with Elemental Ailment by <color\=#2899FF>$2</color>. If they have <link\="s|179"><u>[Radiation]</u></link>, additionally decrease their DEF by <color\=#2899FF>$3</color>."
+超頻脈衝=Jolting Pulse
+【湮滅震盪】=[Devastating Impact]
+湮滅震盪=Devastating Impact
+r:"^效果命中提升<color\=#2899FF>(.*)</color>。敵人被添加元素異常狀態時，防禦力降低<color\=#2899FF>(.*)</color>，上限(.*)層，持續(.*)回合。自身每兩回合開始時，有<color\=#2899FF>(.*)</color>基礎機率使某位隨機敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>. After inflicting Elemental Ailments to foes, decrease their DEF by <color\=#2899FF>$2</color> for $4 turns, up to $3 stack. At the start of every two turns, there is a <color\=#2899FF>$5</color> base chance to inflict a random foe with a random Elemental Ailment they don't have."
+航域引力=Gravitational Force
+【量子輻射】=[Atomic Decay]
+量子輻射=Atomic Decay
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。使場上處於元素異常狀態的敵人防禦力降低<color\=#2899FF>(.*)</color>。若其身上有<link\="s\|179"><u>『輻射』</u></link>，則防禦力額外降低<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Decrease the DEF for foes with Elemental Ailments by <color\=#2899FF>$2</color>. If they have <link\="s|179"><u>[Radiation]</u></link>, additionally decrease their DEF by <color\=#2899FF>$3</color>."
+戰略軍刺=Cobalt Alloy Bayonet
+【淬毒】=[Quenched Edges]
+淬毒=Quenched Edges
+r:"^場上有敵人處於元素異常狀態時，效果命中提升<color\=#2899FF>(.*)</color>。$"="When there is a foe inflicted with Elemental Ailment, increase Ailment ACC by <color\=#2899FF>$1</color>."
+三棱軍刺=Triangular Bayonet
+【撕裂】=[Laceration]
 
 ----------
 2 3 STAR WEAPONS
 ----------
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>."
+r:"^攻擊力提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>."
+r:"^防禦力提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase DEF by <color\=#2899FF>$1</color>."
+r:"^最大生命值提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>."
+r:"^生命值提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>."
+r:"^效果命中提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>."
