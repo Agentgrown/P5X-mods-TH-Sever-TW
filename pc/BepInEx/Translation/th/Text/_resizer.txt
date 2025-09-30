@@ -1,0 +1,5 @@
+uGUI/Canvas/ItemDescription/Text=ChangeFontSize(5)
+
+uGUI/Canvas/DialogueBox/Text=ChangeFontSize(5)
+
+uGUI/Canvas/MainMenu/Button/Text=ChangeFontSizeByPercentage(0.4)
