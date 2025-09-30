@@ -15,7 +15,7 @@
 กับ github ที่แปลภาษาอังกฤษของคุณ https://github.com/JayJay34  
 &nbsp;&nbsp;และอีกหลายๆคนที่ช่วยกันทำ  
    
->แนะนำรอ global เพราะใกล้เปิดแล้วครับ mods นี้คงไม่ได้อัพเดตต่อทำมาแค่เอาสนุกเท่านั้นครับ  เอาไปทำอะไรต่อก็ได้แต่ ตัวไฟล์ front thai p5x  และเอาไปใช้ในเกมอื่นที่เป็นใช้ unity โดยการใช้ XunityAutoTranslate ได้ครับ  ลองไปศึกษาดูครับ https://github.com/bbepis/XUnity.AutoTranslator
+>แนะนำรอ global เพราะใกล้เปิดแล้วครับ mods นี้คงไม่ได้อัพเดตต่อทำมาแค่เอาสนุกเท่านั้นครับ  เอาไปทำอะไรต่อก็ได้แต่ ตัวไฟล์ front thai p5x  และเอาไปใช้ในเกมอื่นที่เป็นใช้ unity โดยการใช้ XunityAutoTranslate ได้ครับ  ลองไปศึกษาดูครับ https://github.com/bbepis/XUnity.AutoTranslator  
 &nbsp;&nbsp;ผมทำไว้ใช้ในเกม xunity translate แก้ไขไฟล์จมมาแล้วครับ  
   
   # ตย. เนื้อเรื่องหลักที่แปล  
