@@ -37,9 +37,10 @@
     
   # ตย. ตอนต่อสู้  
   <img width="1920" height="1051" alt="persona battle pre" src="https://github.com/user-attachments/assets/00e9b1cf-3889-45eb-b5e9-00529ae84262" />  
-
+<br>
+<br>
   ในไฟล์ ThievesSkillsInMenuV4.5.1.txt  
-  มีบางสกิลที่ทำการแปลแล้วมันไม่ติด list มีดังนี้[กำลังตามแก้]  
+  มีบางสกิลที่ทำการแปลแล้วมันไม่ติด list มีดังนี้[กำลังตามแก้อัพเดต 02/10/25] 
   1.Oracle
 >ในนามแห่งเฟเธอร์แมน
 >เจาะข้อมูล
