@@ -83,9 +83,8 @@
 >ถนอม
 >คะนึงหา
 
-10.minimi Miyashita
+10.minami Miyashita
 >พระคุณแห่งการรักษา
-<br>
 >การเยียวยาด้วยใจเมตตา
 >HIGHTLIGHT
 >ความสงบใยจิตใจ
