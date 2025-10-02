@@ -37,3 +37,54 @@
     
   # ตย. ตอนต่อสู้  
   <img width="1920" height="1051" alt="persona battle pre" src="https://github.com/user-attachments/assets/00e9b1cf-3889-45eb-b5e9-00529ae84262" />  
+
+  ในไฟล์ ThievesSkillsInMenuV4.5.1.txt  
+  มีบางสกิลที่ทำการแปลแล้วมันไม่ติด list มีดังนี้[กำลังตามแก้]  
+  1.Oracle
+>ในนามแห่งเฟเธอร์แมน
+>เจาะข้อมูล
+>เสริมค่าสถานะ
+>เก็บกวาด
+
+2.Ayaka Sakai
+>HIGHLIGHT
+>แบกกิงแทรก
+>คอรัสเอฟเฟค
+
+3.Yumi shiina
+>เสริ่มค่าสถานะ
+>ปารตี้คอคเทล
+>รับออเดอร์
+
+4.noir
+>ระเบิดโลหัเต็มพืกัด
+
+5.Riko Takemura
+>ฝันในม่านหมอก
+>วายุสันต์
+>เสริ่มค่าสถานะ
+
+6.Yukimi Fujikawa
+>แสงศักดิ์สิทธิ์
+
+7.Miyu Sahara
+>บทเพลงนางเงือกน้อย
+>เสริมค่าสถานะ
+
+8.summer tomoko noge
+>รุ่งโรจน์
+
+9.Kotone Montagne
+>วสันต์คืบคลาน/ระบำราตรีเหมันต์
+>ถนอม
+>คะนึงหา
+
+10.minimi Miyashita
+>พระคุณแห่งการรักษา
+>การเยียวยาด้วยใจเมตตา
+>HIGHTLIGHT
+>ความสงบใยจิตใจ
+
+11.mio Nasukawa
+>คลื่นสะท้อน
+>santuary
