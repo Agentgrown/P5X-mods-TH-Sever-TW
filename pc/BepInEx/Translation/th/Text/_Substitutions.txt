@@ -21,7 +21,7 @@ Character-specific Persona
 普羅西姆納=โพรซีมนา
 厄律忒亞=เอรีเธีย
 孟婆=เมิ่งโผ
-孟婆·禧逢春=เมิ่งโผ·วสันต์
+{{A}}·禧逢春=เมิ่งโผ·วสันต์
 緒刻=ซีคี
 克麗奧朵拉=คลีโอโดรา
 涅梅爾特斯=นีเมอร์เทส
@@ -363,11 +363,11 @@ PALACE RULERS
 禍津神=Magatsukami
 魅影通行證=Phantom Pass
 魅影=Phantom
-殘寶檢測儀·愛慾=<size\=21>Treasure Detector·Lust</size>
-殘寶檢測儀·虛榮=<size\=21>Treasure Detector·Vanity</size>
-殘寶檢測儀·憤怒=<size\=21>Treasure Detector·Wrath</size>
-殘寶檢測儀·暴食=<size\=20>Treasure Detector·Gluttony</size>
-殘寶檢測儀·傲慢=<size\=21>Treasure Detector·Pride</size>
+殘寶檢測儀·愛慾=<size\=21>Treasure Detector·ราคะ</size>
+殘寶檢測儀·虛榮=<size\=21>Treasure Detector·ความหลงตัวเอง</size>
+殘寶檢測儀·憤怒=<size\=21>Treasure Detector·โทสะ</size>
+殘寶檢測儀·暴食=<size\=20>Treasure Detector·ความตะกละ</size>
+殘寶檢測儀·傲慢=<size\=21>Treasure Detector·ความทะนงตน</size>
 木內·邱比特·雄之=Takeyuki "Cupid" Kiuchi
 邱比特=Cupid
 木內 雄之=Takeyuki Kiuchi
@@ -489,18 +489,18 @@ KOKORO=KOKORO
 大罪之人=Great Sinner
 大罪人=Great Sinner
 大罪=Great Sin
-愛慾=Lust
-色慾=Lust
-虛榮=Vanity
-虛偽=Vanity
-憤怒=Wrath
-暴食的=Gluttony's
-暴食=Gluttony
-貪婪的=Greedy
-傲慢詛咒=Prideful Curse
-傲慢=Pride
-貪婪=Greed
-嫉妒=Envy
+愛慾=ราคะ
+色慾=ตัณหา
+虛榮ความหลงตัวเอง
+虛偽=ความถือตัว
+憤怒=โทสะ
+暴食的=แห่งความตะกละ
+暴食=ความตะกละ
+貪婪的=ละโมบ
+傲慢詛咒=คำสาปแห่งความทะนงตน
+傲慢=ความทะนงตน
+貪婪=ความโลภ
+嫉妒=ริษยา
 
 ----------
 MAIN SIDE CHARACTERS
@@ -1058,10 +1058,10 @@ P代幣=P Medal
 怪盜家族=Phantom Thieves Familia
 怪盜團=Phantom Thieves
 怪盜服=Phantom Thief Attire
-據點=Hideout
+據點=ที่ซ่อน
 眼鏡猴=Tarsier
-天選之人=Chosen Ones
-靈魂伴侶=Soulmates
+天選之人=ผู้ถูกเลือก
+靈魂伴侶=เนื้อคู่
 冰上女王=Queen on Ice
 翔羽俠=Featherman
 羽翔俠=Featherman
@@ -1088,15 +1088,15 @@ CATTLE前輩=Cattle-senpai
 義理=Giri
 
 // PERSONA NAMES //
-亞諾 希克=Janosik
-亞諾希克=Janosik
-羅布羅伊=Robroy
-阿爾維達=Awilda
-曼德蘭=Mandrin
-芒德蘭=Mandrin
-望月千代女=Mochizuki Chiyome
-千代女=Chiyome
-吉諾=Ghino
+亞諾 希克=ยาโนซิค
+亞諾希克=ยาโนซิค
+羅布羅伊=ร็อบ รอย
+阿爾維達=อัลวิลดา
+曼德蘭=มองเดริน
+芒德蘭=มองเดริน
+望月千代女=โมจิซุกิ ชิโยเมะ
+千代女=ชิโยเมะ
+吉諾=กิโน
 
 米迦勒=Michael
 烏列爾=Uriel
@@ -1334,9 +1334,4 @@ CATTLE前輩=Cattle-senpai
 -----------
 คำที่มันแปลแปลกๆ
 -----------
-好、好厲害=สุดยอดเลย
-太帥了=หล่อมาก
-怪盜=phantom thief
-什麼啊=อะไร
-他們=พวกเขา
-缺乏幹勁=แรงจูงใจ
+啊！？=เฮ้ย!?
