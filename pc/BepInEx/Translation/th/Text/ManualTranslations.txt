@@ -3118,22 +3118,22 @@ sr:"^當前時間資訊不符合要求，\n是否等待到<color\=#FFC000>(.*)</
 sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往？$"="The current mission objective is in <color\=#FF0000>$1</color>. Go there now?"
 當前正處於任務中，在<color\=#ffc000>都市</color>確認下「待處理日程」，再進行此事件吧！=You are currently doing a mission, check later!
 
-見證隱藏的世界=Awakening of Desire
-負重之人的對決=Traces of Dreams
-夢想的味道之爭=Outcome of Pride
-規則破壞者的協奏曲=Unconditional Love
-{{A}}的終奏曲={{A}}'s Finale
-假面役者的謝幕=Masked Actors' Curtain Call
-假面役者的憂鬱=Masked Actors' Melancholia
+見證隱藏的世界=การตื่นขึ้นของความปรารถนา
+負重之人的對決=ร่องรอยแห่งความฝัน
+夢想的味道之爭=ผลลัพธ์ของความทระนง
+規則破壞者的協奏曲=รักที่ไร้เงื่อนไข
+{{A}}的終奏曲=บทเพลงสุดท้ายของ {{A}}
+假面役者的謝幕=การโค้งคำนับอำลาของนักแสดงสวมหน้ากาก
+假面役者的憂鬱=ความเศร้าของนักแสดงสวมหน้ากาก
 
-你我的影像=Images of Me and You
-炸肉餅的destiny=Menchi's Destiny
-漫遊{{A}}=Roaming {{A}}
-抓取的樂趣=The Fun of Catching
-傳達心意的音符·上=Melodies of the Heart·Part 1
-傳達心意的音符·下=Melodies of the Heart·Part 2
-天才的熔爐=Genius' Furnace
-風平浪靜的日子=Peaceful Days
+你我的影像=ภาพของฉันและเธอ
+炸肉餅的destiny=ชะตากรรมของเมนจิ
+漫遊{{A}}=ท่องไปใน {{A}}
+抓取的樂趣=ความสนุกของการจับ
+傳達心意的音符·上=ท่วงทำนองแห่งใจ·ภาค 1
+傳達心意的音符·下=ท่วงทำนองแห่งใจ·ภาค 2
+天才的熔爐=เตาหลอมของอัจฉริยะ
+風平浪靜的日子=วันคืนอันสงบสุข
 
 離開賭場=Escape from the casino
 上床休息=Go to bed

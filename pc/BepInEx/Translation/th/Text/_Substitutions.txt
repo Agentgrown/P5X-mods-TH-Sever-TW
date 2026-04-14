@@ -1,10 +1,10 @@
-Higher up placements have higher prio
+dHigher up placements have higher prio
 Longer names or names with titles should go higher
 If a name has A + B + C, and a higher placement name has A + B, the higher up name will take prio
 {{A}}}, {{B}} etc also take placement into consideration
 
 -------------------------
-Character-specific Persona
+Character-specific Persona(ManualTranslations.txt)
 -------------------------
 亞森=อาร์แซน
 基德船長=กัปตันคิดด์
@@ -46,6 +46,11 @@ Character-specific Persona
 伊俄=อิโอ
 波呂狄烏刻斯=โพลีดิวซีส
 忒爾克西厄珀亞=เธล์กซีพีอา
+彭忒西勒亞=เพนเทซีเลีย
+露琪婭=ลูเซีย
+赫密斯=เฮอร์มีส
+阿斯忒洛珀=แอสเทอโรปี
+刻耳柏洛斯=เซอร์เบอรัส
 
 ----------
 OG P5
@@ -101,6 +106,8 @@ Violet CV
 冴小姐=Sae-san
 千早=Chihaya
 約瑟=Jose
+芮絲汀娜=Justine
+卡蘿莉娜=Caroline
 
 ----------
 MAIN
@@ -355,6 +362,9 @@ UMETANE=UMETANE
 須見=Sumi
 俊也=Toshiya
 墨老師=Sumi-sensei
+俊也=Toshiya
+墨老師=Sumi-sensei
+累先生=Rui-san
 
 ----------
 PALACE RULERS
@@ -539,6 +549,15 @@ MAIN SIDE CHARACTERS
 大地前輩=Daichi-san
 大地哥=Daichi-san
 大地=Daichi
+灰峰 讓=Yuzuru Haigamine
+灰峰讓=Yuzuru Haigamine
+灰峰=Haigamine
+藤枝 愛莉=Airi Fujieda
+藤枝愛莉小姐=Airi Fujieda-san
+藤枝愛莉=Airi Fujieda
+愛莉=Airi
+藤枝小姐=Fujieda-san
+藤枝=Fujieda
 
 ----------
 SIDE QUESTS
@@ -781,6 +800,11 @@ CV
 富田美憂=Miyu Tomita
 綠川光=Hikaru Midorikawa
 遠藤綾=Aya Endo
+能登麻美子=Mamiko Noto
+豐崎愛生=Aki Toyosaki
+鳥海浩輔=Kosuke Toriumi
+和氣杏未=Azumi Waki
+高橋伸也=Shinya Takahashi
 
 ----------
 LOCATIONS
@@ -1097,6 +1121,7 @@ CATTLE前輩=รุ่นพี่-Cattle
 望月千代女=โมจิซุกิ ชิโยเมะ
 千代女=ชิโยเมะ
 吉諾=กิโน
+真蒂萊希=เจนติเลสกี
 
 米迦勒=Michael
 烏列爾=Uriel
@@ -1334,3 +1359,11 @@ CATTLE前輩=รุ่นพี่-Cattle
 -----------
 คำที่มันแปลแปลกๆ
 -----------
+# ลบ ครับ/คะ/นะ ที่อยู่ท้ายประโยค
+sr:"ครับ$"=
+sr:"คะ$"=
+sr:"นะ$"=
+sr:"ครับ!"=!
+sr:"คะ!"=!
+sr:"ครับ?"=?
+sr:"คะ?"=?
